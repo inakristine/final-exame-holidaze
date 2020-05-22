@@ -1,0 +1,45 @@
+@import './variables';
+@import './mixins';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+
+    box-sizing: border-box;
+    background-image: url('../../images/bkgr-holidaze-mod.jpg');
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+body{
+    width: 1000px;
+    margin: 80px auto;
+    padding-bottom: 40px;
+    margin-bottom: 150px;
+    min-height: 600px;
+    background-color: rgba($color: #fff, $alpha: 0.75);
+    border-top: 5px solid $dark-pink;
+    @include main-shaddow;
+}
+
+H1{
+    @include titlefont-1;
+}
+
+H2{
+    @include titlefont-2;
+}
+
+h3{
+    @include titlefont-3;
+}
+
+h4{
+    @include titlefont-4;
+}

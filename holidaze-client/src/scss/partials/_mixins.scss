@@ -1,0 +1,106 @@
+@import url("https://use.typekit.net/hzb1ilr.css");
+@import './variables';
+
+@mixin main-shaddow{
+    -webkit-box-shadow: 4px 10px 35px 2px rgba(0,0,0,0.44);
+    -moz-box-shadow: 4px 10px 35px 2px rgba(0,0,0,0.44);
+    box-shadow: 4px 10px 35px 2px rgba(0,0,0,0.44);
+}
+
+@mixin titlefont-1 {
+    font-family: chapman, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3em;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    color: $dark-blue;
+}
+
+@mixin titlefont-2 {
+    font-family: chapman, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3em;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    color: $dark-blue;
+}
+
+@mixin titlefont-3 {
+    font-family: chapman, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.4em;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    color: $dark-blue;
+}
+
+@mixin titlefont-4 {
+    
+    font-family: bilo, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.4em;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    color: $dark-blue;
+}
+
+@mixin largeLink {
+    margin: 0;
+    padding: 0;
+    color: $dark-blue;
+    font-family: bilo, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+@mixin shuffle {
+    position: relative;
+    background-color: $light-lime;
+    height: 12px;
+    border-radius: 6px;
+    margin-top: -7px;
+    border: 2px solid $dark-blue;
+}
+
+@mixin contentContainer {
+    padding: 40px;
+    margin: 40px;
+    border: 2px solid $dark-blue;
+    margin-top: 200px;
+    
+}
+
+@mixin input-field {
+    border: 2px solid $dark-blue;
+    padding: 10px ;
+    font-family: bilo, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1em;
+    &:hover{
+        background-color: $light-blue;
+    }&:focus{
+        outline: none;
+        border-color: $dark-pink;
+    }
+}
+
+@mixin input-warning {
+    font-family: bilo, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1em;
+    color: $dark-pink;
+    margin-top: 3px;
+}
+

@@ -1,0 +1,40 @@
+.lines{
+    width: 300px;
+    padding-top: 80px;
+    float: left;
+    &__pink{
+        height: 2px;
+        width: 300px;
+        margin-top: 6px;
+        background-color: $dark-pink;
+    }
+    &__navy{
+        height: 2px;
+        width: 300px;
+        margin-top: 6px;
+        background-color: $dark-blue;
+    }
+    &__lime{
+        height: 2px;
+        width: 300px;
+        margin-top: 6px;
+        background-color: $dark-lime;
+    }
+}
+
+.logo{
+    height: 100px;
+    width: 400px;
+    border: 2px solid $dark-blue;
+    margin-top: 50px;
+    float: left;
+    &__text{
+
+        @include titlefont-1;
+        margin-top: -7px;
+        text-align: center;
+        padding: 0;
+        color: $dark-blue;
+        font-size: 4.3em;
+    }
+}

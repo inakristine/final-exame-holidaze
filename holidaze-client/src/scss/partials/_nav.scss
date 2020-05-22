@@ -1,0 +1,76 @@
+.navbar{
+    padding-top: 180px;
+    &__link{
+        @include largeLink;
+        margin-left: 40px;
+        &-right{
+            @include largeLink;
+            float: right;
+            margin-right: 40px;
+        }
+    }
+    &__line{
+        height: 2px;
+        width: 100%;
+        background-color: $dark-blue;
+        margin-top: 12px;
+    }
+    &__slider{
+        &--1pos{
+            @include shuffle;
+            margin-left: 20px;
+            width: 120px;
+        }
+        &--2pos{
+            @include shuffle;
+            animation: move2 2s;
+        }
+        &--3pos{
+            @include shuffle;
+            animation: move3 2s;
+            width: 180px
+            ;
+        }
+        &--4pos{
+            @include shuffle;
+            animation: move4 2s;
+            width: 180px
+        }
+    }
+}
+
+
+  
+  @keyframes move4 {
+    0% {
+        margin-left: 20px;
+        width: 120px;
+    }
+    
+    100% {
+        margin-left: 790px;
+        width: 180px;
+    }
+  }
+
+  @keyframes move3 {
+    from {
+        margin-left: 20px;
+        width: 120px;
+    }
+    to {
+        margin-left: 290px;
+            width: 140px;
+    }
+  }
+
+  @keyframes move2 {
+    from {
+        margin-left: 20px;
+        width: 120px;
+    }
+    to {
+        margin-left: 140px;
+        width: 140px;
+    }
+  }

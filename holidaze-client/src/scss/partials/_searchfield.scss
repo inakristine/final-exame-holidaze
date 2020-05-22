@@ -1,0 +1,52 @@
+@import './variables';
+
+.searchfield{
+    padding-top: 40px;
+    float: left;
+    height: 95px;
+    width: 100%;
+    margin-left: 40px;
+    
+    &__input{
+        @include input-field;
+        height: 45px;
+        min-width: 760px;
+    }
+    &__title{
+        @include titlefont-4;
+        font-weight: 300;
+        font-size: 2em;
+    }
+    &__submit{
+        font-family: bilo, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        width: 150px;
+        height: 45px;
+        border: 2px solid $dark-blue;
+        border-left: 0;
+        font-size: 1.1em;
+        font-weight: 500;
+        color: $dark-blue;;
+        background-color: $light-lime;
+        &:hover{
+            background-color: $dark-lime;
+        }&:focus{
+            outline: none;
+            border-color: $dark-pink;
+        }
+    }
+    &__output{
+        @include input-field;
+        height: 45px;
+        min-width: 910px;
+        background-color: white;
+        border-top: 0;
+        float: left;
+        position: relative;
+        z-index: 100;
+        
+    }
+    
+}
+

@@ -1,0 +1,40 @@
+.contactForm{
+    @include contentContainer;
+    min-height: 600px;
+}
+
+.inputContainer{
+    float: left;
+    padding-top: 22px;
+    &__inputfield{
+        @include input-field;
+        height: 45px;
+        min-width: 400px;
+        &--left{
+            @include input-field;
+            height: 45px;
+            margin-right: 36px;
+            min-width: 400px;
+        }
+    }
+    &__messagefield{
+        @include input-field;
+        min-height: 200px;
+        min-width: 840px;
+    }
+    &__submit{
+        @include input-field;
+        width: 150px;
+        margin-top: 40px;
+        border-color: $dark-lime;
+        font-size: 1.3em;
+        float: left;
+        background-color: white;
+        &:hover{
+            background-color: $light-lime;
+        }
+    }&__errorMessage{
+        @include input-warning;
+    }
+
+}

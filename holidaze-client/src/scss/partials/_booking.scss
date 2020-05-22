@@ -1,0 +1,54 @@
+.bookingForm{
+    @include contentContainer;
+    min-height: 500px;
+}
+
+.bookingContainer{
+    float: left;
+    padding-top: 22px;
+    &__inputfield{
+        @include input-field;
+        height: 45px;
+        min-width: 400px;
+        &--left{
+            @include input-field;
+            height: 45px;
+            margin-right: 36px;
+            min-width: 400px;
+        }
+    }
+    &__date{
+        @include input-field;
+        height: 45px;
+        max-width: 180px !important;
+        min-width: 180px !important;
+        &--left{
+            @include input-field;
+            height: 45px;
+            margin-right: 34px;
+            max-width: 180px !important;
+            min-width: 180px !important;
+        }
+    }
+    &__submit{
+        @include input-field;
+        width: 150px;
+        margin-top: 40px;
+        border-color: $dark-lime;
+        font-size: 1.3em;
+        float: left;
+        background-color: white;
+        &:hover{
+            background-color: $light-lime;
+        }
+    }&__errorMessage{
+        @include input-warning;
+    }
+
+}
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}

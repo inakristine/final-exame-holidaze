@@ -1,0 +1,70 @@
+.ad{
+    background-image: url(../../images/ad-holidaze.jpg);
+    min-height: 600px;
+    margin-top: 175px;
+    padding: 40px;
+    border-bottom: 5px solid $dark-pink;
+}
+
+.adcard{
+    @include main-shaddow;
+    width: 280px;
+    height: 180px;
+    float: left;
+    margin-right: 40px;
+    &__titlebox{
+        height: 40px;
+        margin-top: 140px;
+        background-color: $dark-blue;
+        padding: 5px;
+    }
+    &__title{
+        color: $light-lime;
+        text-align: center;
+        margin-top: -4px;
+    }
+}
+
+#ad1{
+    background-image: url(../../images/streets.jpg);
+}
+
+#ad2{
+    background-image: url(../../images/harbour.jpg);
+}
+
+.adbomb{
+    background-color: $dark-pink;
+    text-align: center;
+    height: 180px;
+    width: 180px;
+    border-radius: 90px;
+    float: right;
+    padding: 5px;
+    transform: rotate(12deg);
+    &__title{
+        color: white;
+        font-weight: 500;
+        line-height: 1;
+        font-size: 2em;
+        margin-top: 15px;
+    }
+}
+
+.adframe{
+    border: 2px solid $light-lime;
+    width: 920px;
+    height: 220px;
+    margin-top: 340px;
+    padding-left: 220px;
+    &__title{
+        @include titlefont-2;
+        color: $light-lime;
+    }
+    &__text{
+
+        @include titlefont-4;
+        color: $light-lime;
+        font-size: 1.7em;
+    }
+}
