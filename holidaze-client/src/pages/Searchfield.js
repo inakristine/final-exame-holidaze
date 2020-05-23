@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import establishments from '../JSON/establishments.json';
+import establishments from '../json/establishments.json';
 
 
 export default function Searchfield() {

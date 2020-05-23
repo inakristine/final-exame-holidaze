@@ -30,11 +30,11 @@ $newEstablishment->selfCatering = $_POST["selfCatering"];
 $newEstablishment->id = $_POST["id"];
 
 //Adds object to array
-$establishmentsList = file_get_contents('./holidaze-client/public/establishments.json');
+$establishmentsList = file_get_contents('./holidaze-client/src/json/establishments.json');
 $jsonInput = json_decode($establishmentsList, true);
 array_push($jsonInput, $newEstablishment);
 
 //Writes array to JSON file
 $jsonData = json_encode($jsonInput);
-file_put_contents('./holidaze-client/public/establishments.json', $jsonData);
+file_put_contents('./holidaze-client/src/json/establishments.json', $jsonData);
 ?>
