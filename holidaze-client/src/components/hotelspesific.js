@@ -6,13 +6,21 @@ const hotelSpecific = (props) => {
 
     return (
         <div className='hotelSpecific'>
-            <img src={image} alt={altImg} className='hotelSpecific__image'></img>
-            <h1 className='hotelSpecific__title' >{title}</h1>
-            <div className='hotelSpecific__line'></div>
+
+            <div className='imageContainer'>
+            <img src={image} alt={altImg} className='imageContainer__image'></img>
+            <h1 className='imageContainer__title' >{title}</h1>
+            <div className='imageContainer__line'></div>
+            </div>
+            <div className='infoContainer'>
+            
             <p className='hotelSpecific__text'>{text}</p>
-            <link className='hotelSpecific__btn' to={enquire}>Enquire</link>
+            </div>
+            
         </div>
     )
 }
 
 export default hotelSpecific;
+
+//<link className='hotelSpecific__btn' to={enquire}>Enquire</link>

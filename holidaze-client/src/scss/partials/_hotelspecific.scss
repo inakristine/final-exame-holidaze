@@ -1,0 +1,36 @@
+
+
+.imageContainer{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 200px;
+    border-bottom: 5px solid $dark-pink;
+    max-height: 1300px;
+
+    
+    &__image{
+        width: 100%;
+        margin-top: -50px;
+        margin-bottom: 0;
+        margin-bottom: -50px;
+    }
+    &__title{
+        margin: 24px;
+        margin-left: 40px;
+        position: absolute;
+        top: 580px;
+        z-index: 20;
+        color: $light-lime;
+    }
+    &__line{
+        height: 80px;
+        position: absolute;
+        top: 600px;
+        width: 1000px;
+        border-top: 2px solid $light-lime;
+        border-bottom: 2px solid $light-lime;
+        background-color: rgba($color: $dark-blue, $alpha: 0.8)
+        
+    }
+
+}

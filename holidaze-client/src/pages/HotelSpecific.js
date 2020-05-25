@@ -17,10 +17,20 @@ export default function SpecificHotel(props) {
     
 
     return (
+        
         (hotel !== undefined) ?
-        <h1>{hotel.establishmentName}</h1>
+        <div className='hotelspecificContainer'>
+        <HotelSpecific
+        image={hotel.imageUrl}
+        altImg={hotel.description}
+        title={hotel.establishmentName}
+        text={hotel.description}
+         />
+        </div>
         :
+        <div className='hotelspecificContainer'>
         <h1>no data</h1>
+        </div>
     )
 }
 
@@ -35,3 +45,10 @@ export default function SpecificHotel(props) {
 "description": "Get ready for some amazing sunsets as you sip a cocktail and watch dolphins play in the harbour below.",
 "selfCatering": "true",
 "id": "1" */
+
+
+// <img src={image} alt={altImg} className='hotelSpecific__image'></img>
+//             <h1 className='hotelSpecific__title' >{title}</h1>
+//             <div className='hotelSpecific__line'></div>
+//             <p className='hotelSpecific__text'>{text}</p>
+//             <link className='hotelSpecific__btn' to={enquire}>Enquire</link>
