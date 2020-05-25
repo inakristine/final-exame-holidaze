@@ -52,6 +52,18 @@
     color: $dark-blue;
 }
 
+@mixin paragraph-font {
+    
+    font-family: bilo, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1em;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    color: black;
+}
+
 @mixin largeLink {
     margin: 0;
     padding: 0;
@@ -103,4 +115,5 @@
     color: $dark-pink;
     margin-top: 3px;
 }
+
 
