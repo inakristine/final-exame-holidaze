@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Ad from '../components/ad';
 import HotelCard from '../components/hotelcards';
 import establishments from '../json/establishments.json';
@@ -9,6 +9,7 @@ export default function Home() {
     let [hotels, sethotels] = useState(establishments);
 
     return (
+        
 
         <div className='homecontainer'>
             <Ad />
@@ -16,6 +17,7 @@ export default function Home() {
             <h1 className='cardcontainer__title'>Some of our colaborators:</h1>
                 {hotels !== undefined ? (
                     hotels.map((value, index) => {
+                        console.log(value.id)
                         return (
                             <div>
                                 <HotelCard

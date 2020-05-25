@@ -13,10 +13,8 @@ export default function Searchfield() {
 		const hotels = [];
 			for (let i = 0; i < options.length; i++) {
 				const element = options[i].establishmentName;
-				console.log(element)
 				hotels.push(element)
 			}
-			console.log("melk", hotels)
 			setHotelNames(hotels)
 	}, []);
 
@@ -24,11 +22,10 @@ export default function Searchfield() {
 		setSearch(chosenHotel);
 		setDisplay(false);
 	}
-console.log("kake", hotelNames);
 
 	const onSubmit = (e) => {
-		e.preventDefault();
-		console.log(search);
+			e.preventDefault();
+			console.log(search);
 	}
 
 	return (

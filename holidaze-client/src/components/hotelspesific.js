@@ -1,7 +1,9 @@
 import React from 'react';
 
 const hotelSpecific = (props) => {
-    const { image, altImg, title, text, enquire, viewMore } = props;
+    const { image, altImg, title, text, enquire } = props;
+    console.log(props);
+
     return (
         <div className='hotelSpecific'>
             <img src={image} alt={altImg} className='hotelSpecific__image'></img>

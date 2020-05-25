@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const hotelcard = (props) => {
-    const { imageUrl, altImg, title, text, enquire, viewMore, id } = props;
+    const { imageUrl, altImg, title, text, enquire, id } = props;
     return (
-        <div className='card'>
+        <div className='card' id={id}>
             <img src={imageUrl} alt={altImg} className='card__image'></img>
             <h3 className='card__title' >{title}</h3>
             <div className='card__line'></div>
@@ -16,3 +16,5 @@ const hotelcard = (props) => {
 }
 
 export default hotelcard;
+
+//${id}
