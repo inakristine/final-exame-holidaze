@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const hotelSpecific = (props) => {
-    const { image, altImg, title, text, enquire, email, price, guests, catering } = props;
+    const { image, altImg, title, text, enquire, email, price, guests, catering, map } = props;
     console.log(props);
 
     return (
@@ -16,7 +16,7 @@ const hotelSpecific = (props) => {
             
             <div className='infoContainer'>
             <div className='infoLeft'>
-            <p className='hotelSpecific__text'><b>Description:</b> {text}</p>
+            <p className='hotelSpecific__text'><b>Description:</b><br></br> {text}</p>
             <p className='hotelSpecific__email'><b>E-mail:</b> {email}</p>
             <p className='hotelSpecific__price'><b>Price:</b> {price}</p>
             <p className='hotelSpecific__guests'><b>Guest capacity:</b> {guests}</p>
@@ -24,6 +24,8 @@ const hotelSpecific = (props) => {
             </div>
 
             <div className='infoRight'>
+            <p><b>Location:</b></p>
+            {map}
             
             </div>
 
