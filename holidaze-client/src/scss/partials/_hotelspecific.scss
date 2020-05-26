@@ -30,7 +30,40 @@
         border-top: 2px solid $light-lime;
         border-bottom: 2px solid $light-lime;
         background-color: rgba($color: $dark-blue, $alpha: 0.8)
-        
     }
+}
+
+.infoContainer{
+    @include contentContainer;
+    margin-top: 0;
+    border-top: 0;
+    min-height: 350px;
+}
+
+.infoLeft{
+    width: 398px;
+    margin-right: 40px;
+    float: left;
+}
+.infoRight{
+    width: 398px;
+    float: left;
 
 }
+.marker{
+    align-content: center;
+    &__dot{
+        height: 20px;
+        width: 20px;
+        border: 2px solid $dark-pink;
+        border-radius: 10px;
+        background-color: $light-lime;
+
+    }
+    &__name{
+        color: $light-lime;
+        text-align: center;
+        margin-left: -40px;
+    }
+}
+

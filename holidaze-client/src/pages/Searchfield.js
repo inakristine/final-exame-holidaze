@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import establishments from '../json/establishments.json';
 
 
@@ -23,9 +24,10 @@ export default function Searchfield() {
 		setDisplay(false);
 	}
 
-	const onSubmit = (e) => {
-			e.preventDefault();
-			console.log(search);
+	const onSubmit = () => {
+			
+			console.log("you are searcing for", search);
+			
 	}
 
 	return (
@@ -42,15 +44,16 @@ export default function Searchfield() {
 						placeholder="Enter hotel name"
 						name="Search"
 						value={search}/>
-					<input className='searchfield__submit' type='submit'></input>
+					
+					<Link className='searchfield__submit' to={`/HotelSpecific/${search}`}>GO</Link>
 				</form>
 				{display && (
 					<div>
 					{
 						hotelNames.filter((value) => (value.toLowerCase()).indexOf(search.toLocaleLowerCase()) > -1)
-						.map((value, i) => {
-						return (<div onClick={() => setHotel(value)} className='listitem' key={i}>
-						<span className='searchfield__output'>{value}</span>
+						.map((value) => {
+						return (<div onClick={() => setHotel(value)} className='listitem'  key={value}>
+						<span className='searchfield__output' key={value}>{value}</span>
 						</div>)
 					})
 				}

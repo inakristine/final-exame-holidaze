@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const navigation = (props) => {
-  console.log(props);
-  return (
+
+  const Navigation = (props) => {
+    const { sliderPos } = props;
+	return (
+
     <nav>
     <div className='navbar'>
         <Link className='navbar__link' to='/'>Home</Link>
@@ -14,7 +16,8 @@ const navigation = (props) => {
         <div className='navbar__slider--1pos'></div>
       </div>
     </nav>
-  )
+
+    )
 }
 
-export default navigation;
+export default Navigation;

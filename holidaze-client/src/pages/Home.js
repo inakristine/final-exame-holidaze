@@ -19,13 +19,14 @@ export default function Home() {
                     hotels.map((value, index) => {
                         console.log(value.id)
                         return (
-                            <div>
+                            <div key={value.id}>
                                 <HotelCard
                                     id={value.id}
                                     className='card'
                                     imageUrl={value.imageUrl}
                                     title={value.establishmentName}
                                     text={value.description}
+                                    key={index}
                                 />
                             </div>
                         );

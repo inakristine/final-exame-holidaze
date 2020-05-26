@@ -10,7 +10,7 @@ const hotelcard = (props) => {
             <div className='card__line'></div>
             <p className='card__text'>{text}</p>
             <button className='card__btn--left' to={enquire}>Enquire</button>
-            <Link to={`/HotelSpecific/${id}`} className="card__btn--right">Wiew More</Link>
+            <Link to={`/HotelSpecific/${title}`} className="card__btn--right">Wiew More</Link>
         </div>
     )
 }
