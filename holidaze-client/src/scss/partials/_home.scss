@@ -13,6 +13,7 @@
 .card{
     @include main-shaddow;
     min-width: 280px;
+
     background-color: white;
     &__image{
         width: 398px;
@@ -36,7 +37,7 @@
     &__text{
         margin: 30px;
         margin-top: 12px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     &__btn{
         &--left{
@@ -48,6 +49,7 @@
             font-size: 1.1em;
             margin: 30px;
             margin-top: 0;
+            float: left;
             &:hover{
                 background-color: $light-blue;
             }

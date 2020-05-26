@@ -15,7 +15,7 @@ ReactDOM.render(
 		<App>
 			<Switch>
 				<Route path='/'exact component={Home} />
-        <Route path='/Contact' component={Contact} />
+		<Route path='/Contact' component={Contact} />
         <Route path='/AdminLogin' component={AdminLogin} />
 		<Route path='/Booking' component={Booking} />
 		<Route path="/HotelSpecific/:id" component={HotelSpecific} />

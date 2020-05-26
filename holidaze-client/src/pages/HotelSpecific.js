@@ -7,6 +7,7 @@ import HotelSpecific from '../components/hotelspesific';
 export default function SpecificHotel(props) {
     
     let id = props.match.params.id;
+    console.log("ID=", id);
     let obj = establishments.find(obj => obj.establishmentName === id);
 
     let [hotel, sethotel] = useState(obj);
@@ -27,6 +28,7 @@ export default function SpecificHotel(props) {
         (obj !== undefined) ?
             <div className='hotelspecificContainer'>
                 <HotelSpecific
+                    name={hotel.establishmentName}
                     image={hotel.imageUrl}
                     altImg={hotel.description}
                     title={hotel.establishmentName}

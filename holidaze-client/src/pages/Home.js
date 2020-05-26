@@ -19,7 +19,7 @@ export default function Home() {
                     hotels.map((value, index) => {
                         console.log(value.id)
                         return (
-                            <div key={value.id}>
+                            <div className='card'  key={value.id}>
                                 <HotelCard
                                     id={value.id}
                                     className='card'

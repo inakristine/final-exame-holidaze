@@ -1,8 +1,8 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const hotelSpecific = (props) => {
-    const { image, altImg, title, text, enquire, email, price, guests, catering, map } = props;
+    const { image, altImg, title, text, enquire, email, price, guests, catering, map, link } = props;
     console.log(props);
 
     return (
@@ -21,6 +21,8 @@ const hotelSpecific = (props) => {
             <p className='hotelSpecific__price'><b>Price:</b> {price}</p>
             <p className='hotelSpecific__guests'><b>Guest capacity:</b> {guests}</p>
             <p className='hotelSpecific__catering'><b>Self catering:</b> {catering}</p>
+            <Link to={`/Booking/${title}`} className="card__btn--right">Enquire</Link>
+            <button>{link}</button>
             </div>
 
             <div className='infoRight'>
