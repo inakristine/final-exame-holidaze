@@ -23,3 +23,5 @@ array_push($jsonInput, $newMessage);
 $jsonData = json_encode($jsonInput);
 file_put_contents('./holidaze-client/src/json/contact.json', $jsonData);
 ?>
+
+<?php header("Location: http://localhost:3000/Contact/"); ?>
