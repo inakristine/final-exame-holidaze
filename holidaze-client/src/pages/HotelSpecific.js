@@ -34,7 +34,7 @@ export default function SpecificHotel(props) {
                     title={hotel.establishmentName}
                     text={hotel.description}
                     email={hotel.establishmentEmail}
-                    Price={hotel.price}
+                    price={hotel.price}
                     guests={hotel.maxGuests}
                     catering={hotel.selfCatering}
                     map={<ReactMapGL {...viewport} mapboxApiAccessToken="pk.eyJ1IjoiaW5ha3Jpc3RpbmUiLCJhIjoiY2thbncwc3BiMXYyZTMxbG0zenQ2MWlnYSJ9.z1Kiyt5elDHNod9Ka2_neQ"

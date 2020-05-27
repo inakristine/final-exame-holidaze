@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import contact from 'http://192.168.64.2/holidaze/contact-success.php'
+//import contact from 'http://192.168.64.2/holidaze/contact-success.php'
 import axios from 'axios';
 
 export default function App() {
@@ -8,13 +8,13 @@ export default function App() {
 
     const onSubmit = (data) => {
         console.log(data);
-        axios.post(contact, data)
+       /*  axios.post(contact, data)
         .then(response => {
             console.log(response)
         })
         .catch(error => {
             console.log(error)
-        })
+        }) */
     }
     
     console.log(errors);

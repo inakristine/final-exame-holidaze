@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const hotelSpecific = (props) => {
-    const { image, altImg, title, text, enquire, email, price, guests, catering, map, link } = props;
+    const { image, altImg, title, text, email, price, guests, catering, map } = props;
     console.log(props);
 
     return (
@@ -16,13 +16,13 @@ const hotelSpecific = (props) => {
             
             <div className='infoContainer'>
             <div className='infoLeft'>
-            <p className='hotelSpecific__text'><b>Description:</b><br></br> {text}</p>
-            <p className='hotelSpecific__email'><b>E-mail:</b> {email}</p>
-            <p className='hotelSpecific__price'><b>Price:</b> {price}</p>
-            <p className='hotelSpecific__guests'><b>Guest capacity:</b> {guests}</p>
-            <p className='hotelSpecific__catering'><b>Self catering:</b> {catering}</p>
-            <Link to={`/Booking/${title}`} className="card__btn--right">Enquire</Link>
-            <button>{link}</button>
+            <p className='infoLeft__text'><b>Description:</b><br/> {text}</p><div className="br"/>
+            <p className='infoLeft_text'><b>E-mail:</b> {email}</p><div className="br"/>
+            <p className='infoLeft__text'><b>Price:</b> {price} $</p><div className="br"/>
+            <p className='infoLeft__text'><b>Guest capacity:</b> {guests}</p><div className="br"/>
+            <p className='infoLeft__text'><b>Self catering:</b> {catering}</p>
+            <Link to={`/Booking/${title}`} className="infoLeft__button">Enquire</Link>
+       
             </div>
 
             <div className='infoRight'>

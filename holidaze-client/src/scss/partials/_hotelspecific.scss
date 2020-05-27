@@ -9,7 +9,6 @@
     border-bottom: 5px solid $dark-pink;
     max-height: 1300px;
 
-    
     &__image{
         width: 100%;
         margin-top: -50px;
@@ -46,6 +45,23 @@
     width: 398px;
     margin-right: 40px;
     float: left;
+    &__button{
+        border: 2px solid $dark-lime;
+        padding: 7px 40px ;
+        font-family: bilo, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.1em;
+        margin-top: 30px;
+        float: left;
+        &:hover{
+            background-color: $light-blue;
+        }
+        &:focus{
+        outline: none;
+        border-color: $dark-pink;
+        }
+    }
 }
 .infoRight{
     width: 398px;
