@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Ad from '../components/ad';
 import HotelCard from '../components/hotelcards';
 import establishments from '../json/establishments.json';
+import Searchfield from '../pages/Searchfield';
 
 
 export default function Home() {
@@ -12,6 +13,8 @@ export default function Home() {
         
 
         <div className='homecontainer'>
+
+            <Searchfield className='searchfield' />
             <Ad />
             <div className='cardcontainer'>
             <h1 className='cardcontainer__title'>Some of our colaborators:</h1>

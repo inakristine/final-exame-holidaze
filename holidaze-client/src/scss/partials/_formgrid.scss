@@ -1,6 +1,3 @@
-.bookingForm{
-    @include contentContainer;
-}
 
 .formGrid{
     display: grid;
@@ -76,71 +73,16 @@
         grid-row-start: 5;
         grid-row-end: 6;
     }
-}
-
-.bookingContainer{
-    &__inputfield{
-        @include input-field;
-        height: 45px;
-        min-width: 100%;
-        &--left{
-            @include input-field;
-            height: 45px;
-            min-width: 92%;
-        }
+    &__Number12{
+        grid-column-start:1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
     }
-    &____numbertitle{
-        line-height: 0.2;
+    &__Number13{
+        grid-column-start:1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
     }
-    &__date{
-        @include input-field;
-        height: 45px;
-        width: 100%;
-        &--left{
-            @include input-field;
-            height: 45px;
-            margin-right: 34px;
-            width: 86%;
-        }
-    }
-
-    &__guests{
-        @include input-field;
-        height: 45px;
-        width:90%;
-    }
-    &__title{
-        margin-top: 12px;
-    }
-    &__note{
-        @include input-field;
-        height: 105px;
-        width: 100% ;
-    }
-    &__submit{
-        @include input-field;
-        width: 100%;
-        border-color: $dark-lime;
-        font-size: 1.3em;
-        padding: 7px;
-        background-color: white;
-        &:hover{
-            background-color: $light-lime;
-        }
-    }&__errorMessage{
-        @include input-warning;
-    }
-
-}
-[type="date"]::-webkit-inner-spin-button {
-    display: none;
-  }
-[type="date"]::-webkit-calendar-picker-indicator {
-    color: rgba(0, 0, 0, 0);
-    opacity: 1;
-    display: block;
-    background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png) no-repeat;
-    width: 20px;
-    height: 20px;
-    border-width: thin;
 }

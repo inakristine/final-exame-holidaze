@@ -1,11 +1,8 @@
 .contactForm{
     @include contentContainer;
-    min-height: 600px;
 }
 
 .inputContainer{
-    float: left;
-    padding-top: 22px;
     &__inputfield{
         @include input-field;
         height: 45px;
@@ -13,7 +10,6 @@
         &--left{
             @include input-field;
             height: 45px;
-            margin-right: 36px;
             min-width: 400px;
         }
     }
@@ -24,8 +20,7 @@
     }
     &__submit{
         @include input-field;
-        width: 150px;
-        margin-top: 40px;
+        width: 100%;
         border-color: $dark-lime;
         font-size: 1.3em;
         float: left;
