@@ -7,7 +7,7 @@ import Searchfield from '../pages/Searchfield';
 
 export default function Home() {
 
-    let [hotels, sethotels] = useState(establishments);
+    let [hotels, sethotels] = useState(establishments.reverse());
 
     return (
         

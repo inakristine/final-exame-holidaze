@@ -21,7 +21,7 @@ export default function App() {
 						type='text'
 						placeholder='Full name'
 						name='clientName'
-						ref={register({ required: true, maxLength: 180 })}
+						ref={register({ required: true})}
 					/>
 					{errors.clientName && (
 						<p className='inputContainer__errorMessage'>
