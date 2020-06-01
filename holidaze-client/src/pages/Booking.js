@@ -6,6 +6,8 @@ export default function Booking() {
 
     let [arrival, setArrival] = useState('');
     let [departure, setDeparture] = useState('');
+    let [adults, setAdults] = useState('');
+    let [children, setChildren] = useState('');
 
     const handleChange = (input) => {
         let name = input.target.name;
@@ -16,14 +18,18 @@ export default function Booking() {
             break;
             case 'checkout': setDeparture(value);
             break;
+            case 'adults': setAdults(value);
+            break;
+            case 'children': setChildren(value);
+            break
         }
+        
     }
 
-    console.log('ankomst', arrival);
-    console.log('avreise', departure);
+    let buttonConditions = ((arrival !=='') && (departure !=='') && (adults !=='') && (children !==''));
+    console.log(buttonConditions);
 
     const { register, handleSubmit, errors } = useForm();
-
     console.log(errors);
 
     
@@ -35,16 +41,7 @@ export default function Booking() {
 
              <form className='[ formGrid ]' action='http://192.168.64.2/holidaze/enquiry-success.php' method='post' onFocus={handleSubmit()} >
 
-                <div className='[ bookingContainer ][ formGrid__Number1 ]'>
-                    <h4>Please enter a hotel name:</h4>
-                    <input
-                        className='bookingContainer__inputfield'
-                        type="text"
-                        placeholder="Hotel name"
-                        name="establishment"
-                        ref={register({ required: true })} />
-                    {errors.establishment && <p className='bookingContainer__errorMessage'>A hotel name is required</p>}
-                </div>
+
 
                 <div className='[ bookingContainer ][ formGrid__Number2 ]'>
                     <h4>Please enter your name:</h4>
@@ -67,6 +64,17 @@ export default function Booking() {
                     {errors.email && <p className='bookingContainer__errorMessage'>Your email is required</p>}
                 </div>
 
+                <div className='[ bookingContainer ][ formGrid__Number1 ]'>
+                <h4>Please enter a hotel name:</h4>
+                <input
+                    className='bookingContainer__inputfield'
+                    type="text"
+                    placeholder="Hotel name"
+                    name="establishment"
+                    ref={register({ required: true })} />
+                {errors.establishment && <p className='bookingContainer__errorMessage'>A hotel name is required</p>}
+            </div>
+
                 <div className='[ bookingContainer ][ formGrid__Number4 ]'>
                     <h4>Date of arrival:</h4>
                     <input
@@ -75,8 +83,8 @@ export default function Booking() {
                         type="date"
                         name="checkin"
                         placeholder="mm.dd.yyyy"
-                        ref={register} />
-                    {errors.checkin && <p className='bookingContainer__errorMessage'>A date is required</p>}
+                         />
+                    <p className={( (arrival ==='') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>A date is required</p>
                 </div>
 
                 <div className='[ bookingContainer ][ formGrid__Number5 ]'>
@@ -87,28 +95,33 @@ export default function Booking() {
                         name="checkout"
                         type="date"
                         placeholder="mm.dd.yyyy"
-                        ref={register} />
-                    {errors.checkout && <p className='bookingContainer__errorMessage'>A date is required</p>}
+                        />
+                        <p className={( (departure ==='') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>A date is required</p>
                 </div>
 
                 <input className='[ bookingContainer__guests ] [ formGrid__Number6 ]'
-                    type="number"
+                    onChange={handleChange}
+                    type="text"
                     name="adults"
-                    placeholder='0'
-                    ref={register} />
-                {errors.adults && <p className='bookingContainer__errorMessage'>At least one adult must be booked in</p>}
+                    placeholder='0' />
+                    
                 <div className='[ bookingContainer__Number7 ]'>
                     <h4 className='bookingContainer__title'>Number of adult guests:</h4>
+                    <p className={((adults ==='') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>At least one adult must be booked in</p>
+        
                 </div>
 
                 <input className='[ bookingContainer__guests ][ formGrid__Number8 ]'
+                    onChange={handleChange}
                     placeholder='0'
-                    type="number"
+                    type="text"
                     name="children"
-                    ref={register} />
-                {errors.children && <p className='bookingContainer__errorMessage'>Type zero if no children</p>}
+                    />
+                
                 <div className='[ bookingContainer__Number9 ]'>
                     <h4 className='bookingContainer__title'>Number of cildren (3-16 years):</h4>
+                    <p className={((children ==='') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>Type zero if no children</p>
+                    
                 </div>
 
                 <div className='[ bookingContainer ][ formGrid__Number10 ]'>
@@ -122,7 +135,7 @@ export default function Booking() {
                 </div>
 
                 <input className='[ bookingContainer__submit ][ formGrid__Number11 ]__submit'
-                    type="submit"
+                    type="submit" disabled={(buttonConditions !== true)}
                     />
 
             </form>

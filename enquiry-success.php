@@ -30,3 +30,6 @@ array_push($jsonInput, $newEnquiry);
 $jsonData = json_encode($jsonInput);
 file_put_contents('./holidaze-client/src/json/enquiries.json', $jsonData);
 ?>
+
+
+<?php header("Location: http://localhost:3000/Booking/"); ?>

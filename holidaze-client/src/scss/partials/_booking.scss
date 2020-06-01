@@ -127,8 +127,17 @@
         &:hover{
             background-color: $light-lime;
         }
-    }&__errorMessage{
+        &:disabled {
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+    &__errorMessage{
         @include input-warning;
+        &--hide{
+            display: none;
+        }
     }
 
 }
