@@ -7,6 +7,7 @@ import AdminLogin from './pages/AdminLogin';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Booking from './pages/Booking';
+import BookingID from './pages/Booking';
 import HotelSpecific from './pages/HotelSpecific';
 import App from './App';
 
@@ -18,7 +19,9 @@ ReactDOM.render(
 		<Route path='/Contact' component={Contact} />
         <Route path='/AdminLogin' component={AdminLogin} />
 		<Route path='/Booking' component={Booking} />
-		<Route path="/HotelSpecific/:id" component={HotelSpecific} />
+
+		<Route path='/BookingID/:id' component={BookingID} />
+		<Route path='/HotelSpecific/:id' component={HotelSpecific} />
 			</Switch>
 		</App>
 	</Router>,

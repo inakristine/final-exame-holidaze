@@ -57,26 +57,25 @@ export default function AdminLogin() {
 
         <div className='[ dashboard ]'>
 
-            <div className='dashboard__messages'>
-            {contacts !== undefined ? (
-                bookings.reverse().map((value, index) => {
-                    console.log('ID:', bookings)
-                    return (
-                        <div key={index}>
-                            <ContactList
-                                clientName={value.clientName}
-                                email={value.email}
-                                message={value.message}
-                                key={index}
-                            />
-                        </div>
-                    );
-                })
-            ) : (
-                    <div>Waiting for bookings to apair</div>
-                )}
-    
-            </div>
+        <div className='dashboard__messages'>
+        {contacts !== undefined ? (
+            contacts.reverse().map((value, index) => {
+                return (
+                    <div key={index}>
+                        <ContactList
+                            clientName={value.clientName}
+                            email={value.email}
+                            message={value.message}
+                            key={index}
+                        />
+                    </div>
+                );
+            })
+        ) : (
+                <div>Waiting for bookings to apair</div>
+            )}
+       
+        </div>
 
             <div className='dashboard__bookings'>
             {bookings !== undefined ? (

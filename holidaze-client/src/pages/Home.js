@@ -20,7 +20,6 @@ export default function Home() {
             <h1 className='cardcontainer__title'>Some of our colaborators:</h1>
                 {hotels !== undefined ? (
                     hotels.map((value, index) => {
-                        console.log(value.id)
                         return (
                             <div className='card'  key={value.id}>
                                 <HotelCard

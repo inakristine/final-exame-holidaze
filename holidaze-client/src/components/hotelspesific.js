@@ -21,7 +21,7 @@ const hotelSpecific = (props) => {
             <p className='infoLeft__text'><b>Price:</b> {price} $</p><div className="br"/>
             <p className='infoLeft__text'><b>Guest capacity:</b> {guests}</p><div className="br"/>
             <p className='infoLeft__text'><b>Self catering:</b> {catering}</p>
-            <Link to={`/Booking/${title}`} className="infoLeft__button">Enquire</Link>
+            <Link to={`/BookingID/${title}`} className="infoLeft__button">Enquire</Link>
        
             </div>
 

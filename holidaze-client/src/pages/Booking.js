@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 
-export default function Booking() {
+export default function Booking (props) {
+    
+    let bookingTitle = props.match.params.id;
+    console.log('Booking: ', bookingTitle)
 
     let [arrival, setArrival] = useState('');
     let [departure, setDeparture] = useState('');
@@ -28,6 +31,8 @@ export default function Booking() {
 
     let buttonConditions = ((arrival !=='') && (departure !=='') && (adults !=='') && (children !==''));
     console.log(buttonConditions);
+
+
 
     const { register, handleSubmit, errors } = useForm();
     console.log(errors);
@@ -71,6 +76,8 @@ export default function Booking() {
                     type="text"
                     placeholder="Hotel name"
                     name="establishment"
+                    value={(( bookingTitle !==undefined) ? bookingTitle : undefined)}
+                    
                     ref={register({ required: true })} />
                 {errors.establishment && <p className='bookingContainer__errorMessage'>A hotel name is required</p>}
             </div>
