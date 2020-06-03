@@ -11,7 +11,7 @@ export default function Contact() {
 		<div className='contactForm'>
 			<h1>Send us a message:</h1>
 
-			<form  className='[ formGrid ]' action='http://192.168.64.2/holidaze/contact-success.php' method='post' onFocus={handleSubmit()} >
+			<form className='[ formGrid ]' action='http://192.168.64.2/holidaze/contact-success.php' method='post' onFocus={handleSubmit()} >
 				<div className='[ inputContainer ][ formGrid__Number2 ]'>
 					<h4>Please enter your name:</h4>
 					<input
@@ -19,7 +19,7 @@ export default function Contact() {
 						type='text'
 						placeholder='Full name'
 						name='clientName'
-						ref={register({ required: true})}
+						ref={register({ required: true })}
 					/>
 					{errors.clientName && (
 						<p className='inputContainer__errorMessage'>
@@ -59,8 +59,8 @@ export default function Contact() {
 						</p>
 					)}
 				</div>
-					<div className='[ formGrid__Number13 ]'>
-				<input className='[ inputContainer__submit ]' type='submit' />
+				<div className='[ formGrid__Number13 ]'>
+					<input className='[ inputContainer__submit ]' type='submit' />
 				</div>
 			</form>
 		</div>

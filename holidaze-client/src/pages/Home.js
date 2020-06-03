@@ -10,18 +10,18 @@ export default function Home() {
     let [hotels, sethotels] = useState(establishments.reverse());
 
     return (
-        
+
 
         <div className='homecontainer'>
 
             <Searchfield className='searchfield' />
             <Ad />
             <div className='cardcontainer'>
-            <h1 className='cardcontainer__title'>Some of our colaborators:</h1>
+                <h1 className='cardcontainer__title'>Some of our colaborators:</h1>
                 {hotels !== undefined ? (
                     hotels.map((value, index) => {
                         return (
-                            <div className='card'  key={value.id}>
+                            <div className='card' key={value.id}>
                                 <HotelCard
                                     id={value.id}
                                     className='card'

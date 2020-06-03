@@ -4,16 +4,16 @@ import Navigation from '../components/nav';
 export default function navigation(props) {
 
   let [sliderpos, setSliderpos] = useState('navbar__slider--1pos');
-	return (
+  return (
 
     <nav>
-    <div className='navbar'>
+      <div className='navbar'>
         <Navigation
-        sliderPos={sliderpos}
+          sliderPos={sliderpos}
         />
       </div>
     </nav>
 
-	);
+  );
 }
 

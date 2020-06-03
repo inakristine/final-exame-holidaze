@@ -26,22 +26,16 @@ export default function Booking(props) {
             case 'children': setChildren(value);
                 break
         }
-
     }
 
     let buttonConditions = ((arrival !== '') && (departure !== '') && (adults !== '') && (children !== ''));
     console.log(buttonConditions);
 
-
-
     const { register, handleSubmit, errors } = useForm();
     console.log(errors);
 
-
-
     return (
         <div className='bookingForm'>
-
             <h1>Send an enquiry:</h1>
 
             <form
@@ -148,9 +142,7 @@ export default function Booking(props) {
                 <input className='[ bookingContainer__submit ][ formGrid__Number11 ]__submit'
                     type="submit" disabled={(buttonConditions !== true)}
                 />
-
             </form>
-
         </div>
     );
 }

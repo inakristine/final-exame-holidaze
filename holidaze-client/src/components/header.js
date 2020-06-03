@@ -14,11 +14,11 @@ const header = () => {
                 <div className='lines__pink'> </div>
             </div>
 
-        <Link to='/'>
-        <div className="logo">
-                <p className="logo__text">Holidaze</p>
-            </div>
-        </Link>
+            <Link to='/'>
+                <div className="logo">
+                    <p className="logo__text">Holidaze</p>
+                </div>
+            </Link>
             <div className='lines'>
                 <div className='lines__pink'> </div>
                 <div className='lines__navy'> </div>

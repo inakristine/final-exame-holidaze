@@ -46,86 +46,82 @@ export default function AdminLogin() {
         setLoginstatus(false);
     }
 
-   
-
     return <div>{(loginstatus && <div className='admincontainer'>
-    
-        
-    <button
-    className='logout'
-    onClick={logOutHandler}>Log Out
+
+        <button
+            className='logout'
+            onClick={logOutHandler}>Log Out
 </button><h1>Admin dashboard:</h1>
 
         <div className='[ dashboard ]'>
+            <div className='dashboard__messages'>
 
-        <div className='dashboard__messages'>
+                <div className='dashboard__titlebox'>
+                    <h3 className='dashboard__subtitle'>Messages:</h3>
+                    <div className='listings__line'></div>
+                </div>
 
-    <div className='dashboard__titlebox'>
-        <h3 className='dashboard__subtitle'>Messages:</h3>
-        <div className='listings__line'></div>
-        </div>
-
-        <div className='dashboard__contentbox'>
-        {contacts !== undefined ? (
-            contacts.reverse().map((value, index) => {
-                return (
-                    <div key={index}>
-                        <ContactList
-                            clientName={value.clientName}
-                            email={value.email}
-                            message={value.message}
-                            key={index}
-                        />
-                    </div>
-                );
-            })
-        ) : (
-                <div>Waiting for messages to apair</div>
-            )}
-        </div>
-        </div>
+                <div className='dashboard__contentbox'>
+                    {contacts !== undefined ? (
+                        contacts.reverse().map((value, index) => {
+                            return (
+                                <div key={index}>
+                                    <ContactList
+                                        clientName={value.clientName}
+                                        email={value.email}
+                                        message={value.message}
+                                        key={index}
+                                    />
+                                </div>
+                            );
+                        })
+                    ) : (
+                            <div>Waiting for messages to apair</div>
+                        )}
+                </div>
+            </div>
 
             <div className='dashboard__bookings'>
-            <div className='dashboard__titlebox'>
-            <h3 className='dashboard__subtitle'>Bookings:</h3>
-            <div className='listings__line'></div>
-            </div>
-            <div className='dashboard__contentbox'>
-            {bookings !== undefined ? (
-                bookings.reverse().map((value, index) => {
-                    return (
-                        <div key={index}>
-                            <BookingsList
-                                id={value.clientName}
-                                establishment={value.establishment}
-                                clientName={value.clientName}
-                                email={value.email}
-                                checkin={value.checkin}
-                                checkout={value.checkout}
-                                adults={value.adults}
-                                children={value.children}
-                                notes={value.notes}
-                                key={index}
-                            />
-                        </div>
-                    );
-                })
-            ) : (
-                    <div>Waiting for bookings to apair</div>
-                )}
-           
-            </div>
+                <div className='dashboard__titlebox'>
+                    <h3 className='dashboard__subtitle'>Bookings:</h3>
+                    <div className='listings__line'></div>
+                </div>
+                <div className='dashboard__contentbox'>
+                    {bookings !== undefined ? (
+                        bookings.reverse().map((value, index) => {
+                            return (
+                                <div key={index}>
+                                    <BookingsList
+                                        id={value.clientName}
+                                        establishment={value.establishment}
+                                        clientName={value.clientName}
+                                        email={value.email}
+                                        checkin={value.checkin}
+                                        checkout={value.checkout}
+                                        adults={value.adults}
+                                        children={value.children}
+                                        notes={value.notes}
+                                        key={index}
+                                    />
+                                </div>
+                            );
+                        })
+                    ) : (
+                            <div>Waiting for bookings to apair</div>
+                        )}
+
+                </div>
             </div>
 
             <div className='dashboard__listings'>
-            <div className='dashboard__titlebox'>
-            <h3 className='dashboard__subtitle'>Add new establishments:</h3>
-            <div className='listings__line'></div>
-            </div>
+                <div className='dashboard__titlebox'>
+                    <h3 className='dashboard__subtitle'>Add new establishments:</h3>
+                    <div className='listings__line'></div>
+                </div>
 
-            <div className='dashboard__contentbox'>
-            <AddEstablishment />
-            </div>
+                <div className='dashboard__contentbox'>
+                    <AddEstablishment />
+                </div>
             </div>
         </div>
 
