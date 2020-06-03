@@ -3,6 +3,7 @@ import Contacts from '../json/contact.json';
 import Bookings from '../json/enquiries.json';
 import BookingsList from '../components/bookingsList';
 import ContactList from '../components/contactList';
+import AddEstablishment from './AddEstablishment';
 
 
 export default function AdminLogin() {
@@ -58,6 +59,13 @@ export default function AdminLogin() {
         <div className='[ dashboard ]'>
 
         <div className='dashboard__messages'>
+
+    <div className='dashboard__titlebox'>
+        <h3 className='dashboard__subtitle'>Messages:</h3>
+        <div className='listings__line'></div>
+        </div>
+
+        <div className='dashboard__contentbox'>
         {contacts !== undefined ? (
             contacts.reverse().map((value, index) => {
                 return (
@@ -72,12 +80,17 @@ export default function AdminLogin() {
                 );
             })
         ) : (
-                <div>Waiting for bookings to apair</div>
+                <div>Waiting for messages to apair</div>
             )}
-       
+        </div>
         </div>
 
             <div className='dashboard__bookings'>
+            <div className='dashboard__titlebox'>
+            <h3 className='dashboard__subtitle'>Bookings:</h3>
+            <div className='listings__line'></div>
+            </div>
+            <div className='dashboard__contentbox'>
             {bookings !== undefined ? (
                 bookings.reverse().map((value, index) => {
                     return (
@@ -102,8 +115,17 @@ export default function AdminLogin() {
                 )}
            
             </div>
+            </div>
 
             <div className='dashboard__listings'>
+            <div className='dashboard__titlebox'>
+            <h3 className='dashboard__subtitle'>Add new establishments:</h3>
+            <div className='listings__line'></div>
+            </div>
+
+            <div className='dashboard__contentbox'>
+            <AddEstablishment />
+            </div>
             </div>
         </div>
 

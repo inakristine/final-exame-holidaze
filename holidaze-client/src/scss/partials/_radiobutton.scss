@@ -1,0 +1,67 @@
+@mixin vh() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  @include vh();
+  + label {
+    position: relative;
+    display: inline-flex;
+    padding: 14px 0 0 55px;
+    margin-bottom: 30px;
+    user-select: none;
+    color: white;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 42px;
+      height: 42px;
+      border: 2px solid $dark-blue;
+      background: white;
+      text-align: center;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  + label {
+    &:after {
+      background-color: transparent;
+      content: "";
+      display: block;
+      position: absolute;
+      left: 7px;
+      top: 5px;
+      width: 25px;
+      height: 20px;
+      opacity: 0.2;
+      border-bottom: 5px solid $dark-blue;
+      border-right: 5px solid $dark-blue;
+      transform: rotate(45deg);
+    }
+  }
+  &:checked {
+    + label {
+      &:after {
+        content: "";
+        opacity: 1;}
+    }
+  }
+}
