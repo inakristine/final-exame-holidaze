@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 
-export default function Booking (props) {
-    
+export default function Booking(props) {
+
     let bookingTitle = props.match.params.id;
     console.log('Booking: ', bookingTitle)
 
@@ -18,18 +18,18 @@ export default function Booking (props) {
 
         switch (name) {
             case 'checkin': setArrival(value);
-            break;
+                break;
             case 'checkout': setDeparture(value);
-            break;
+                break;
             case 'adults': setAdults(value);
-            break;
+                break;
             case 'children': setChildren(value);
-            break
+                break
         }
-        
+
     }
 
-    let buttonConditions = ((arrival !=='') && (departure !=='') && (adults !=='') && (children !==''));
+    let buttonConditions = ((arrival !== '') && (departure !== '') && (adults !== '') && (children !== ''));
     console.log(buttonConditions);
 
 
@@ -37,16 +37,19 @@ export default function Booking (props) {
     const { register, handleSubmit, errors } = useForm();
     console.log(errors);
 
-    
+
 
     return (
         <div className='bookingForm'>
 
             <h1>Send an enquiry:</h1>
 
-             <form className='[ formGrid ]' action='http://192.168.64.2/holidaze/enquiry-success.php' method='post' onFocus={handleSubmit()} >
-
-
+            <form
+                className='[ formGrid ]'
+                action='http://192.168.64.2/holidaze/enquiry-success.php'
+                method='post'
+                onFocus={handleSubmit()}
+            >
 
                 <div className='[ bookingContainer ][ formGrid__Number2 ]'>
                     <h4>Please enter your name:</h4>
@@ -55,7 +58,8 @@ export default function Booking (props) {
                         type="text"
                         placeholder="Full name"
                         name="clientName"
-                        ref={register({ required: true, maxLength: 120 })} />
+                        ref={register({ required: true, maxLength: 120 })}
+                    />
                     {errors.clientName && <p className='bookingContainer__errorMessage'>Your name is required</p>}
                 </div>
 
@@ -70,17 +74,17 @@ export default function Booking (props) {
                 </div>
 
                 <div className='[ bookingContainer ][ formGrid__Number1 ]'>
-                <h4>Please enter a hotel name:</h4>
-                <input
-                    className='bookingContainer__inputfield'
-                    type="text"
-                    placeholder="Hotel name"
-                    name="establishment"
-                    value={(( bookingTitle !==undefined) ? bookingTitle : undefined)}
-                    
-                    ref={register({ required: true })} />
-                {errors.establishment && <p className='bookingContainer__errorMessage'>A hotel name is required</p>}
-            </div>
+                    <h4>Please enter a hotel name:</h4>
+                    <input
+                        className='bookingContainer__inputfield'
+                        type="text"
+                        placeholder="Hotel name"
+                        name="establishment"
+                        value={((bookingTitle !== undefined) ? bookingTitle : undefined)}
+
+                        ref={register({ required: true })} />
+                    {errors.establishment && <p className='bookingContainer__errorMessage'>A hotel name is required</p>}
+                </div>
 
                 <div className='[ bookingContainer ][ formGrid__Number4 ]'>
                     <h4>Date of arrival:</h4>
@@ -90,20 +94,20 @@ export default function Booking (props) {
                         type="date"
                         name="checkin"
                         placeholder="mm.dd.yyyy"
-                         />
-                    <p className={( (arrival ==='') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>A date is required</p>
+                    />
+                    <p className={((arrival === '') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>A date is required</p>
                 </div>
 
                 <div className='[ bookingContainer ][ formGrid__Number5 ]'>
                     <h4>Date of departure:</h4>
                     <input className='bookingContainer__date'
-                    onChange={handleChange}
+                        onChange={handleChange}
                         type="date"
                         name="checkout"
                         type="date"
                         placeholder="mm.dd.yyyy"
-                        />
-                        <p className={( (departure ==='') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>A date is required</p>
+                    />
+                    <p className={((departure === '') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>A date is required</p>
                 </div>
 
                 <input className='[ bookingContainer__guests ] [ formGrid__Number6 ]'
@@ -111,11 +115,11 @@ export default function Booking (props) {
                     type="text"
                     name="adults"
                     placeholder='0' />
-                    
+
                 <div className='[ bookingContainer__Number7 ]'>
                     <h4 className='bookingContainer__title'>Number of adult guests:</h4>
-                    <p className={((adults ==='') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>At least one adult must be booked in</p>
-        
+                    <p className={((adults === '') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>At least one adult must be booked in</p>
+
                 </div>
 
                 <input className='[ bookingContainer__guests ][ formGrid__Number8 ]'
@@ -123,12 +127,12 @@ export default function Booking (props) {
                     placeholder='0'
                     type="text"
                     name="children"
-                    />
-                
+                />
+
                 <div className='[ bookingContainer__Number9 ]'>
                     <h4 className='bookingContainer__title'>Number of cildren (3-16 years):</h4>
-                    <p className={((children ==='') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>Type zero if no children</p>
-                    
+                    <p className={((children === '') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>Type zero if no children</p>
+
                 </div>
 
                 <div className='[ bookingContainer ][ formGrid__Number10 ]'>
@@ -143,7 +147,7 @@ export default function Booking (props) {
 
                 <input className='[ bookingContainer__submit ][ formGrid__Number11 ]__submit'
                     type="submit" disabled={(buttonConditions !== true)}
-                    />
+                />
 
             </form>
 

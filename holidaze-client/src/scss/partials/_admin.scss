@@ -128,14 +128,36 @@
         padding: 10px;
         margin-top: 5px;
         margin-bottom: 20px;
-        
     }
-  
-    &____check{
+    &___check{
         padding-top: 4px;
         padding-bottom: 4px;
         width: 100%;
         background-color: white;
         height: 47px;
+    }
+    &__submit{
+        @include input-field;
+        width: 100%;
+        border-color: $dark-lime;
+        font-size: 1.3em;
+        padding: 7px;
+        background-color: white;
+        &:hover{
+            background-color: $light-lime;
+        }
+        &:disabled {
+            &:hover{
+                background-color: white;
+            }
+        }
+    }
+    &__errorMessage{
+        @include input-warning;
+        margin-top: -18px;
+        margin-bottom: 20px;
+        &--hide{
+            display: none;
+        }
     }
 }
