@@ -20,57 +20,37 @@
             @include shuffle;
             margin-left: 20px;
             width: 120px;
+            transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         }
         &--2pos{
             @include shuffle;
-            animation: move2 2s;
+            margin-left: 140px;
+            width: 140px;
+            transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         }
         &--3pos{
             @include shuffle;
-            animation: move3 2s;
-            width: 180px
-            ;
+            margin-left: 290px;
+            width: 140px;
+            transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         }
         &--4pos{
             @include shuffle;
-            animation: move4 2s;
-            width: 180px
+            margin-left: 790px;
+            width: 180px;
+            transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         }
     }
 }
 
 
   
-  @keyframes move4 {
-    0% {
-        margin-left: 20px;
-        width: 120px;
-    }
-    
-    100% {
-        margin-left: 790px;
-        width: 180px;
-    }
-  }
-
-  @keyframes move3 {
-    from {
-        margin-left: 20px;
-        width: 120px;
-    }
-    to {
-        margin-left: 290px;
-            width: 140px;
-    }
-  }
-
-  @keyframes move2 {
-    from {
-        margin-left: 20px;
-        width: 120px;
-    }
-    to {
-        margin-left: 140px;
-        width: 140px;
-    }
-  }
+  

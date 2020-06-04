@@ -7,7 +7,7 @@ import establishments from '../json/establishments.json';
 export default function Searchfield() {
 
 	let [display, setDisplay] = useState(false);
-	let [options, setOptions] = useState(establishments);
+	let options = establishments;
 	let [hotelNames, setHotelNames] = useState([]);
 	let [search, setSearch] = useState('');
 
