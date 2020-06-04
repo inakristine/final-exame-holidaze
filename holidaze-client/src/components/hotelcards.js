@@ -9,8 +9,8 @@ const hotelcard = (props) => {
             <h3 className='card__title' >{title}</h3>
             <div className='card__line'></div>
             <p className='card__text'>{text}</p>
-            <Link to={`/BookingID/${title}`} className="card__btn--left">Enquire</Link>
-            <Link to={`/HotelSpecific/${title}`} className="card__btn--right">Wiew More</Link>
+            <Link to={`/BookingID/${title}`} className='card__btn--left'>Enquire</Link>
+            <Link to={`/HotelSpecific/${title}`} className='card__btn--right'>Wiew More</Link>
         </div>
     )
 }

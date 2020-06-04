@@ -35,9 +35,9 @@ export default function Navigation(props) {
     <nav>
     <div className='navbar'>
       <Link className='navbar__link' to='/'  onClick={ sliderHome } >Home</Link>
-      <Link className='navbar__link' to="/Booking/" onClick={ sliderBooking } >Booking</Link>
-      <Link className='navbar__link' to="/Contact/" onClick={ sliderContact }>Contact</Link>
-      <Link className='navbar__link-right' to="/AdminLogin/"  onClick={ sliderAdmin } >Admin login</Link>
+      <Link className='navbar__link' to='/Booking/' onClick={ sliderBooking } >Booking</Link>
+      <Link className='navbar__link' to='/Contact/' onClick={ sliderContact }>Contact</Link>
+      <Link className='navbar__link-right' to='/AdminLogin/'  onClick={ sliderAdmin } >Admin login</Link>
       <div className='navbar__line'></div>
       <div className={ sliderpos }></div>
     </div>

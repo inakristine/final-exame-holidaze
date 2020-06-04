@@ -26,9 +26,7 @@ export default function Searchfield() {
 	}
 
 	const onSubmit = () => {
-
-		console.log("you are searcing for", search);
-
+		console.log('you are searcing for', search);
 	}
 
 	return (
@@ -42,8 +40,8 @@ export default function Searchfield() {
 						onClick={() => setDisplay(true)}
 						className='searchfield__input'
 						type='text'
-						placeholder="Enter hotel name"
-						name="Search"
+						placeholder='Enter hotel name'
+						name='Search'
 						value={search} />
 
 					<Link className='searchfield__submit' to={`/HotelSpecific/${search}`}>GO</Link>

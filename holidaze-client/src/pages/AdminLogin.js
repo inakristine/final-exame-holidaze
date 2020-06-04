@@ -12,16 +12,14 @@ export default function AdminLogin() {
 
     let [username, setUsername] = useState(userName);
     let [password, setPassword] = useState(passWord);
-    let [usernameInput, setUsernameInput] = useState("");
-    let [passwordInput, setPasswordInput] = useState("");
+    let [usernameInput, setUsernameInput] = useState('');
+    let [passwordInput, setPasswordInput] = useState('');
     let [loginstatus, setLoginstatus] = useState(false);
-    let [errorMessage, setErrorMessage] = useState("");
+    let [errorMessage, setErrorMessage] = useState('');
 
     let [bookings, setBookings] = useState(Bookings);
-    console.log('Her er bookingdata', bookings);
 
     let [contacts, setContacts] = useState(Contacts);
-    console.log('Her er kotaktdata', contacts);
 
 
     const handleChange = (input) => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL, { Marker } from 'react-map-gl';
 import establishments from '../json/establishments.json';
 import HotelSpecific from '../components/hotelspesific';
 
@@ -7,7 +7,7 @@ import HotelSpecific from '../components/hotelspesific';
 export default function SpecificHotel(props) {
 
     let id = props.match.params.id;
-    console.log("ID=", id);
+    console.log('ID=', id);
     let obj = establishments.find(obj => obj.establishmentName === id);
 
     let [hotel, sethotel] = useState(obj);
@@ -18,8 +18,8 @@ export default function SpecificHotel(props) {
     const [viewport, setViewport] = useState({
         latitude: latitude,
         longitude: longetude,
-        height: "300px",
-        width: "389px",
+        height: '300px',
+        width: '389px',
         zoom: 12,
 
     })
@@ -38,19 +38,19 @@ export default function SpecificHotel(props) {
                     guests={hotel.maxGuests}
                     catering={hotel.selfCatering}
 
-                    map={<ReactMapGL {...viewport} mapboxApiAccessToken="pk.eyJ1IjoiaW5ha3Jpc3RpbmUiLCJhIjoiY2thbncwc3BiMXYyZTMxbG0zenQ2MWlnYSJ9.z1Kiyt5elDHNod9Ka2_neQ"
-                        mapStyle="mapbox://styles/inakristine/ckanxddus67761ilku2tw8egn"
+                    map={<ReactMapGL {...viewport} mapboxApiAccessToken='pk.eyJ1IjoiaW5ha3Jpc3RpbmUiLCJhIjoiY2thbncwc3BiMXYyZTMxbG0zenQ2MWlnYSJ9.z1Kiyt5elDHNod9Ka2_neQ'
+                        mapStyle='mapbox://styles/inakristine/ckanxddus67761ilku2tw8egn'
                         onViewportChange={viewport => {
                             setViewport(viewport);
                         }}
                     >
                         <Marker
-                            className="marker"
+                            className='marker'
                             latitude={latitude}
                             longitude={longetude}
                         >
-                            <div className="marker__dot"></div>
-                            <h4 className="marker__name">{hotel.establishmentName}</h4>
+                            <div className='marker__dot'></div>
+                            <h4 className='marker__name'>{hotel.establishmentName}</h4>
                         </Marker>
                     </ReactMapGL>}
                 />

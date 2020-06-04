@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 export default function Booking(props) {
 
     let bookingTitle = props.match.params.id;
-    console.log('Booking: ', bookingTitle)
 
     let [arrival, setArrival] = useState('');
     let [departure, setDeparture] = useState('');
@@ -29,7 +28,6 @@ export default function Booking(props) {
     }
 
     let buttonConditions = ((arrival !== '') && (departure !== '') && (adults !== '') && (children !== ''));
-    console.log(buttonConditions);
 
     const { register, handleSubmit, errors } = useForm();
     console.log(errors);
@@ -49,9 +47,9 @@ export default function Booking(props) {
                     <h4>Please enter your name:</h4>
                     <input
                         className='bookingContainer__inputfield--left'
-                        type="text"
-                        placeholder="Full name"
-                        name="clientName"
+                        type='text'
+                        placeholder='Full name'
+                        name='clientName'
                         ref={register({ required: true, maxLength: 120 })}
                     />
                     {errors.clientName && <p className='bookingContainer__errorMessage'>Your name is required</p>}
@@ -61,9 +59,9 @@ export default function Booking(props) {
                     <h4>Please enter your email:</h4>
                     <input
                         className='bookingContainer__inputfield--left'
-                        type="text"
-                        placeholder="Email"
-                        name="email" ref={register({ required: true, pattern: /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+.([A-Za-z]{2,4})$/i })} />
+                        type='text'
+                        placeholder='Email'
+                        name='email' ref={register({ required: true, pattern: /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+.([A-Za-z]{2,4})$/i })} />
                     {errors.email && <p className='bookingContainer__errorMessage'>Your email is required</p>}
                 </div>
 
@@ -71,9 +69,9 @@ export default function Booking(props) {
                     <h4>Please enter a hotel name:</h4>
                     <input
                         className='bookingContainer__inputfield'
-                        type="text"
-                        placeholder="Hotel name"
-                        name="establishment"
+                        type='text'
+                        placeholder='Hotel name'
+                        name='establishment'
                         value={((bookingTitle !== undefined) ? bookingTitle : undefined)}
 
                         ref={register({ required: true })} />
@@ -85,9 +83,9 @@ export default function Booking(props) {
                     <input
                         className='bookingContainer__date--left'
                         onChange={handleChange}
-                        type="date"
-                        name="checkin"
-                        placeholder="mm.dd.yyyy"
+                        type='date'
+                        name='checkin'
+                        placeholder='mm.dd.yyyy'
                     />
                     <p className={((arrival === '') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>A date is required</p>
                 </div>
@@ -96,18 +94,18 @@ export default function Booking(props) {
                     <h4>Date of departure:</h4>
                     <input className='bookingContainer__date'
                         onChange={handleChange}
-                        type="date"
-                        name="checkout"
-                        type="date"
-                        placeholder="mm.dd.yyyy"
+                        type='date'
+                        name='checkout'
+                        type='date'
+                        placeholder='mm.dd.yyyy'
                     />
                     <p className={((departure === '') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>A date is required</p>
                 </div>
 
                 <input className='[ bookingContainer__guests ] [ formGrid__Number6 ]'
                     onChange={handleChange}
-                    type="text"
-                    name="adults"
+                    type='text'
+                    name='adults'
                     placeholder='0' />
 
                 <div className='[ bookingContainer__Number7 ]'>
@@ -119,8 +117,8 @@ export default function Booking(props) {
                 <input className='[ bookingContainer__guests ][ formGrid__Number8 ]'
                     onChange={handleChange}
                     placeholder='0'
-                    type="text"
-                    name="children"
+                    type='text'
+                    name='children'
                 />
 
                 <div className='[ bookingContainer__Number9 ]'>
@@ -134,13 +132,13 @@ export default function Booking(props) {
                     <textarea
                         className='bookingContainer__note'
                         placeholder='Please let us know if you are making bookings for anyone with special needs. We take greate pride in our no-descrimination-policy.'
-                        type="textaerea"
-                        name="notes"
+                        type='textaerea'
+                        name='notes'
                     />
                 </div>
 
                 <input className='[ bookingContainer__submit ][ formGrid__Number11 ]__submit'
-                    type="submit" disabled={(buttonConditions !== true)}
+                    type='submit' disabled={(buttonConditions !== true)}
                 />
             </form>
         </div>

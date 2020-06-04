@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 
 export default function Contact() {
 	const { register, handleSubmit, errors } = useForm();
-	console.log("Errors present:", errors);
+	console.log('Errors present:', errors);
 
 	return (
 		<div className='contactForm'>

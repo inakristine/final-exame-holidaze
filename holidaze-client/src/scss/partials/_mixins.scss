@@ -117,4 +117,12 @@
     margin-top: 3px;
 }
 
+@mixin icon {
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 8px;
+}
+
 

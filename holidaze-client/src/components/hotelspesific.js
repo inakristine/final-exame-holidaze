@@ -16,12 +16,17 @@ const hotelSpecific = (props) => {
 
             <div className='infoContainer'>
                 <div className='infoLeft'>
-                    <p className='infoLeft__text'><b>Description:</b><br /> {text}</p><div className="br" />
-                    <p className='infoLeft_text'><b>E-mail:</b> {email}</p><div className="br" />
-                    <p className='infoLeft__text'><b>Price:</b> {price} $</p><div className="br" />
-                    <p className='infoLeft__text'><b>Guest capacity:</b> {guests}</p><div className="br" />
+                <div className='infoContainer__infoIcon' />
+                <p className='infoLeft__text'><b>Description:</b><br /> {text}</p><div className='br' />
+                <div className='infoContainer__mailIcon' />
+                    <p className='infoLeft_text'><b>E-mail:</b> {email}</p><div className='br' />
+                    <div className='infoContainer__dollarIcon' />
+                    <p className='infoLeft__text'><b>Price:</b> {price} $</p><div className='br' />
+                    <div className='infoContainer__guestsIcon' />
+                    <p className='infoLeft__text'><b>Guest capacity:</b> {guests}</p><div className='br' />
+                    <div className='infoContainer__cateringIcon' />
                     <p className='infoLeft__text'><b>Self catering:</b> {catering}</p>
-                    <Link to={`/BookingID/${title}`} className="infoLeft__button">Enquire</Link>
+                    <Link to={`/BookingID/${title}`} className='infoLeft__button'>Enquire</Link>
 
                 </div>
 

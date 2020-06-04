@@ -4,8 +4,14 @@ import { useForm } from 'react-hook-form';
 
 export default function AddEstablishment() {
 
+    let [isChecked, SetIsChecked] = useState(false);
+
+    let toggleChecked = () => {
+        SetIsChecked(!false);
+    }
+
     const { register, handleSubmit, errors } = useForm();
-    console.log(errors);
+    console.log(isChecked);
 
     return (
 
@@ -101,8 +107,20 @@ export default function AddEstablishment() {
 
 
             <div className='AddEstablishment__check' >
-                <input className='AddEstablishment__inputbox' id="a" type="checkbox" />
-                <label className='AddEstablishment__inputlable' htmlFor="a"><h4>Self catering:</h4></label>
+                <input
+                onClick={toggleChecked}
+                value={isChecked}
+                className='AddEstablishment__inputbox'
+                id='a'
+                type='checkbox'
+                name='selfCatering'                
+                />
+                <label
+                className='AddEstablishment__inputlable'
+                htmlFor='a'
+                >
+                <h4>Self catering:</h4>
+                </label>
             </div>
 
             <h4>ID:</h4>
@@ -117,7 +135,7 @@ export default function AddEstablishment() {
 
 
             <input className='AddEstablishment__submit'
-                type="submit"
+                type='submit'
             />
 
         </form>
