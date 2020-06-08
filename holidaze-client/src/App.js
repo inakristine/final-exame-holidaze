@@ -12,7 +12,7 @@ window.onload = init();
 
 export default function App(props) {
   return (
-    <div className='App'>
+    <div className="App">
     <Header />
     <Nav />
     {props.children}

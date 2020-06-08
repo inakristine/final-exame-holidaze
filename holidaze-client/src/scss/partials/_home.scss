@@ -18,7 +18,6 @@
     &__image{
         width: 398px;
         height: 300px;
-        background-color: cornflowerblue;
     }
     &__title{
         margin: 30px;
@@ -80,3 +79,61 @@
         }
     }
 }
+
+@media only screen and (max-width: 800px) {
+    .cardcontainer{
+        @include contentContainer;
+        margin: 5%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: [line1] 100% ;
+        padding: 5%;
+
+    grid-gap: 25px;
+        &__title{
+            grid-column: 1;
+            font-size: 2.2em;
+        }
+    }
+    
+    .card{
+        @include main-shaddow;
+        min-width: 100%;
+        height: auto;
+    
+        background-color: white;
+        &__image{
+            width: 100%;
+            height: 150px;
+        }
+        &__title{
+            margin: 15px;
+            margin-bottom: 3px;
+            margin-top: 10px;
+        }
+        &__line{
+            height: 2px;
+            width: 90%;
+            margin: 5%;
+            margin-bottom: 0;
+            margin-top: 8px;
+            background-color: $dark-lime;
+            z-index: 1000;
+        }
+        &__text{
+            margin: 5%;
+            margin-top: 12px;
+            margin-bottom: 30px;
+        }
+        &__btn{
+            &--left{
+                margin: 5%;
+                margin-top: 0;
+            }
+            &--right{
+                margin: 5%;
+                margin-top: 0;
+            }
+        }
+    }
+  }

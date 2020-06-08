@@ -68,3 +68,43 @@
         font-size: 1.7em;
     }
 }
+
+@media only screen and (max-width: 800px) {
+
+    .ad{
+        background-image: url(../../images/ad-holidaze.jpg);
+        background-size: 150%;
+        min-height: 0;
+        width: 100%;
+        margin-top: 90px;
+        padding: 0;
+        padding-top: 12px;
+        border-bottom: 5px solid $dark-pink;
+    }
+    
+    .adcard{
+        display: none;
+    }
+
+    .adbomb{
+        display: none;
+    }
+    
+    .adframe{
+        border: none;
+        margin: 0spx;
+        margin: 0px;
+        height: 210px;
+        width: 100%;
+        padding-left: 5%;
+        &__title{
+            font-size: 2em;
+        }
+        &__text{
+            font-size: 1.2em;
+            list-style: 1.2em;
+            line-height: 1.2em;
+        }
+    }
+
+  }

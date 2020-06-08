@@ -2,81 +2,7 @@
     @include contentContainer;
 }
 
-.formGrid{
-    display: grid;
-    grid-template-columns: [line1] 10% [line2] 42% [line3] 25% [line3] 23%;
-    row-gap: 25px;
-    margin-top: 25px;
-    &__Number1{
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    &__Number2{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    &__Number3{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    &__Number4{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
 
-    &__Number5{
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    &__Number6{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-    
-    &__Number7{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-    &__Number8{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-    &__Number9{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-
-    &__Number10{
-        grid-column-start:3;
-        grid-column-end: 5;
-        grid-row-start: 3;
-        grid-row-end: 5;
-    }
-    &__Number11{
-        grid-column-start:1;
-        grid-column-end: 5;
-        grid-row-start: 5;
-        grid-row-end: 6;
-    }
-}
 
 .bookingContainer{
     &__inputfield{
@@ -152,4 +78,37 @@
     width: 20px;
     height: 20px;
     border-width: thin;
+}
+
+@media only screen and (max-width: 800px) {
+    .bookingForm{
+        @include contentContainer;
+        margin: 5%;
+        padding: 5%;
+        width: 90%;
+    }
+
+.bookingContainer{
+    &__inputfield{
+        &--left{
+            min-width: 100%;
+        }
+    }
+    &____numbertitle{
+        line-height: 0.2;
+    }
+    &__date{
+        
+        &--left{
+            width: 100%;
+        }
+    }
+
+    &__guests{
+        width:100%;
+        margin-top: -10px;
+    }
+    
+    }
+    
 }

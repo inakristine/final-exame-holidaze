@@ -44,10 +44,10 @@ export default function Searchfield() {
 						name='Search'
 						value={search} />
 
-					<Link className='searchfield__submit' to={`/HotelSpecific/${search}`}>GO</Link>
+					<div  className='searchfield__submit'><Link to={`/HotelSpecific/${search}`}>GO</Link></div>
 				</form>
 				{display && (
-					<div>
+					<div  className='searchfield__list'>
 						{
 							hotelNames.filter((value) => (value.toLowerCase()).indexOf(search.toLocaleLowerCase()) > -1)
 								.map((value) => {

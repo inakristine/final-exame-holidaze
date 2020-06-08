@@ -17,7 +17,7 @@ export default function Home() {
             <Searchfield className='searchfield' />
             <Ad />
             <div className='cardcontainer'>
-                <h1 className='cardcontainer__title'>Some of our colaborators:</h1>
+                <h1 className='cardcontainer__title'>Our associated hotels:</h1>
                 {hotels !== undefined ? (
                     hotels.map((value, index) => {
                         return (

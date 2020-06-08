@@ -29,7 +29,6 @@
     margin-top: 50px;
     float: left;
     &__text{
-
         @include titlefont-1;
         margin-top: -7px;
         text-align: center;
@@ -37,4 +36,36 @@
         color: $dark-blue;
         font-size: 4.3em;
     }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .lines{
+        width: 20%;
+        padding-top: 42px;
+        &__pink{
+            width: 100%;
+            margin-top: 4px;
+        }
+        &__navy{
+            width: 100%;
+            margin-top: 4px;
+        }
+        &__lime{
+            width: 100%;
+            margin-top: 4px;
+        }
+    }
+
+
+.logo{
+    height: 25%;
+    width: 60%;
+    margin-top: 30px;
+    &__text{
+        font-size: 2.6em;
+    }
+}
+
+
 }

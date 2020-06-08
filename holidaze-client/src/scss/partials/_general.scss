@@ -20,8 +20,7 @@ html{
 body{
     width: 1000px;
     margin: 80px auto;
-    padding-bottom: 40px;
-    margin-bottom: 150px;
+    margin-bottom: 0;
     min-height: 600px;
     background-color: rgba($color: #fff, $alpha: 0.75);
     border-top: 5px solid $dark-pink;
@@ -69,3 +68,32 @@ a{
     width: 100%;
     margin: 0;
 }
+
+
+@media only screen and (max-width: 800px) {
+
+    html{
+        background-image: none;
+        background-color: $light-blue;
+    }
+    
+    body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 0;
+        background-color: $light-blue;
+    }
+    .br{
+        height: 5px;
+        width: 100%;
+        margin: 0;
+    }
+    H1{
+        font-size: 1.8em;
+    }
+    a{
+        text-align: center;
+    }
+    
+  }

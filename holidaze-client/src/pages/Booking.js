@@ -108,7 +108,7 @@ export default function Booking(props) {
                     name='adults'
                     placeholder='0' />
 
-                <div className='[ bookingContainer__Number7 ]'>
+                <div className='[ bookingContainer] [ formGrid__Number7 ]'>
                     <h4 className='bookingContainer__title'>Number of adult guests:</h4>
                     <p className={((adults === '') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>At least one adult must be booked in</p>
 
@@ -121,7 +121,7 @@ export default function Booking(props) {
                     name='children'
                 />
 
-                <div className='[ bookingContainer__Number9 ]'>
+                <div className='[ bookingContainer ][ formGrid__Number9 ]'>
                     <h4 className='bookingContainer__title'>Number of cildren (3-16 years):</h4>
                     <p className={((children === '') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>Type zero if no children</p>
 
