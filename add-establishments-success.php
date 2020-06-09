@@ -38,3 +38,6 @@ array_push($jsonInput, $newEstablishment);
 $jsonData = json_encode($jsonInput);
 file_put_contents('./holidaze-client/src/json/establishments.json', $jsonData);
 ?>
+
+
+<?php header("Location: http://localhost:3000/AdminLogin/"); ?>

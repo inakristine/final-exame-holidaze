@@ -9,18 +9,15 @@ import AddEstablishment from './AddEstablishment';
 export default function AdminLogin() {
     let passWord = localStorage.getItem('password')
     let userName = localStorage.getItem('username')
-
     let username = userName;
     let password = passWord;
+    let bookings = Bookings;
+    let contacts = Contacts;
+
     let [usernameInput, setUsernameInput] = useState('');
     let [passwordInput, setPasswordInput] = useState('');
     let [loginstatus, setLoginstatus] = useState(false);
     let [errorMessage, setErrorMessage] = useState('');
-
-    let bookings = Bookings;
-
-    let contacts = Contacts;
-
 
     const handleChange = (input) => {
         let name = input.target.name;
@@ -44,7 +41,7 @@ export default function AdminLogin() {
         setLoginstatus(false);
     }
 
-    return<div><div className='pushbox'></div>{(loginstatus && <div className='admincontainer'>
+    return <div><div className='pushbox'></div>{(loginstatus && <div className='admincontainer'>
 
         <button
             className='logout'

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 import establishments from '../json/establishments.json';
-
 
 export default function Searchfield() {
 
@@ -43,10 +41,10 @@ export default function Searchfield() {
 						name='Search'
 						value={search} />
 
-					<div  className='searchfield__submit'><Link to={`/HotelSpecific/${search}`}>GO</Link></div>
+					<div className='searchfield__submit'><Link to={`/HotelSpecific/${search}`}>GO</Link></div>
 				</form>
 				{display && (
-					<div  className='searchfield__list'>
+					<div className='searchfield__list'>
 						{
 							hotelNames.filter((value) => (value.toLowerCase()).indexOf(search.toLocaleLowerCase()) > -1)
 								.map((value) => {

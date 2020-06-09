@@ -31,8 +31,6 @@ const ad = () => {
         • Free public transport within city limits<br />
         • 20% discount on all guided tours</p>
             </div>
-
-
         </div>
     )
 }

@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { ADD_ESTABLISHMENT } from '../Constants/Constants';
 
 
 export default function AddEstablishment() {
 
     let [isChecked, SetIsChecked] = useState(false);
-
     let toggleChecked = () => {
         SetIsChecked(!false);
     }
-
     const { register, handleSubmit, errors } = useForm();
     console.log(isChecked);
 
     return (
-
         <form
             className='[ listings ][ AddEstablishment ]'
-            action='http://192.168.64.2/holidaze/add-establishments-success.php'
+            action={ADD_ESTABLISHMENT}
             method='post'
             onFocus={handleSubmit()}>
 
@@ -30,7 +28,6 @@ export default function AddEstablishment() {
                 ref={register({ required: true })} />
             {errors.establishmentName && <p className='AddEstablishment__errorMessage'>This input field can not be empty</p>}
 
-
             <h4>Establishment email:</h4>
             <input
                 className='AddEstablishment__input'
@@ -39,8 +36,6 @@ export default function AddEstablishment() {
                 name='establishmentEmail'
                 ref={register({ required: true, pattern: /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+.([A-Za-z]{2,4})$/i })} />
             {errors.establishmentEmail && <p className='AddEstablishment__errorMessage'>This input field can not be empty</p>}
-
-
 
             <h4>Enter image url:</h4>
             <input
@@ -51,8 +46,6 @@ export default function AddEstablishment() {
                 ref={register({ required: true })} />
             {errors.imageUrl && <p className='AddEstablishment__errorMessage'>This input field can not be empty</p>}
 
-
-
             <h4>Price pr night:</h4>
             <input
                 className='AddEstablishment__input'
@@ -61,8 +54,6 @@ export default function AddEstablishment() {
                 name='price'
                 ref={register({ required: true })} />
             {errors.price && <p className='AddEstablishment__errorMessage'>This input field can not be empty</p>}
-
-
 
             <h4>Maximum number of guests:</h4>
             <input
@@ -73,8 +64,6 @@ export default function AddEstablishment() {
                 ref={register({ required: true })} />
             {errors.maxGuests && <p className='AddEstablishment__errorMessage'>This input field can not be empty</p>}
 
-
-
             <h4>Latitude:</h4>
             <input
                 className='AddEstablishment__input'
@@ -83,8 +72,6 @@ export default function AddEstablishment() {
                 name='googleLat'
                 ref={register({ required: true })} />
             {errors.googleLat && <p className='AddEstablishment__errorMessage'>This input field can not be empty</p>}
-
-
 
             <h4>Longetude:</h4>
             <input
@@ -95,7 +82,6 @@ export default function AddEstablishment() {
                 ref={register({ required: true })} />
             {errors.googleLong && <p className='AddEstablishment__errorMessage'>This input field can not be empty</p>}
 
-
             <h4>Description:</h4>
             <input
                 className='AddEstablishment__input'
@@ -105,21 +91,20 @@ export default function AddEstablishment() {
                 ref={register({ required: true })} />
             {errors.description && <p className='AddEstablishment__errorMessage'>This input field can not be empty</p>}
 
-
             <div className='AddEstablishment__check' >
                 <input
-                onClick={toggleChecked}
-                value={isChecked}
-                className='AddEstablishment__inputbox'
-                id='a'
-                type='checkbox'
-                name='selfCatering'                
+                    onClick={toggleChecked}
+                    value={isChecked}
+                    className='AddEstablishment__inputbox'
+                    id='a'
+                    type='checkbox'
+                    name='selfCatering'
                 />
                 <label
-                className='AddEstablishment__inputlable'
-                htmlFor='a'
+                    className='AddEstablishment__inputlable'
+                    htmlFor='a'
                 >
-                <h4>Self catering:</h4>
+                    <h4>Self catering:</h4>
                 </label>
             </div>
 
@@ -131,8 +116,6 @@ export default function AddEstablishment() {
                 name='id'
                 ref={register({ required: true })} />
             {errors.id && <p className='AddEstablishment__errorMessage'>This input field can not be empty</p>}
-
-
 
             <input className='AddEstablishment__submit'
                 type='submit'

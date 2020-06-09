@@ -10,8 +10,6 @@ export default function Home() {
     let hotels = establishments.reverse();
 
     return (
-
-
         <div className='homecontainer'>
 
             <Searchfield className='searchfield' />
@@ -39,10 +37,6 @@ export default function Home() {
             </div>
         </div>
     )
-
-
-
-
 }
 
 

@@ -16,9 +16,9 @@ const hotelSpecific = (props) => {
 
             <div className='infoContainer'>
                 <div className='infoLeft'>
-                <div className='infoContainer__infoIcon' />
-                <p className='infoLeft__text'><b>Description:</b><br /> {text}</p><div className='br' />
-                <div className='infoContainer__mailIcon' />
+                    <div className='infoContainer__infoIcon' />
+                    <p className='infoLeft__text'><b>Description:</b><br /> {text}</p><div className='br' />
+                    <div className='infoContainer__mailIcon' />
                     <p className='infoLeft_text'><b>E-mail:</b> {email}</p><div className='br' />
                     <div className='infoContainer__dollarIcon' />
                     <p className='infoLeft__text'><b>Price:</b> {price} $</p><div className='br' />
