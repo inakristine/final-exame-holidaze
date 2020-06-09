@@ -10,7 +10,7 @@ export default function SpecificHotel(props) {
     console.log('ID=', id);
     let obj = establishments.find(obj => obj.establishmentName === id);
 
-    let [hotel, sethotel] = useState(obj);
+    let hotel = obj;
 
     let longetude = parseFloat(obj.googleLong);
     let latitude = parseFloat(obj.googleLat);

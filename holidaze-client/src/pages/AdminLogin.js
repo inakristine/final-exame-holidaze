@@ -10,16 +10,16 @@ export default function AdminLogin() {
     let passWord = localStorage.getItem('password')
     let userName = localStorage.getItem('username')
 
-    let [username, setUsername] = useState(userName);
-    let [password, setPassword] = useState(passWord);
+    let username = userName;
+    let password = passWord;
     let [usernameInput, setUsernameInput] = useState('');
     let [passwordInput, setPasswordInput] = useState('');
     let [loginstatus, setLoginstatus] = useState(false);
     let [errorMessage, setErrorMessage] = useState('');
 
-    let [bookings, setBookings] = useState(Bookings);
+    let bookings = Bookings;
 
-    let [contacts, setContacts] = useState(Contacts);
+    let contacts = Contacts;
 
 
     const handleChange = (input) => {

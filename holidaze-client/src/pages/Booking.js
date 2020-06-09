@@ -24,6 +24,9 @@ export default function Booking(props) {
                 break;
             case 'children': setChildren(value);
                 break
+            default:
+
+                break;
         }
     }
 
@@ -96,7 +99,6 @@ export default function Booking(props) {
                         onChange={handleChange}
                         type='date'
                         name='checkout'
-                        type='date'
                         placeholder='mm.dd.yyyy'
                     />
                     <p className={((departure === '') ? 'bookingContainer__errorMessage' : 'bookingContainer__errorMessage--hide')}>A date is required</p>

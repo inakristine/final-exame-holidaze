@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Ad from '../components/ad';
 import HotelCard from '../components/hotelcards';
 import establishments from '../json/establishments.json';
@@ -7,7 +7,7 @@ import Searchfield from '../pages/Searchfield';
 
 export default function Home() {
 
-    let [hotels, sethotels] = useState(establishments.reverse());
+    let hotels = establishments.reverse();
 
     return (
 

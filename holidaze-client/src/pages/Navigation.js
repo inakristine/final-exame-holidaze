@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navigation(props) {
@@ -42,7 +42,7 @@ export default function Navigation(props) {
 
   return (
     <nav>
-    <div className={menuicon} onClick={showmenu}>
+    <div className={menuicon} onClick={showHideMenu}>
     <div className='navicon__bar'></div>
     <div className='navicon__bar'></div>
     <div className='navicon__bar'></div>

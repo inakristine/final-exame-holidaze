@@ -7,14 +7,13 @@ import establishments from '../json/establishments.json';
 export default function Searchfield() {
 
 	let [display, setDisplay] = useState(false);
-	let options = establishments;
 	let [hotelNames, setHotelNames] = useState([]);
 	let [search, setSearch] = useState('');
 
 	useEffect(() => {
 		const hotels = [];
-		for (let i = 0; i < options.length; i++) {
-			const element = options[i].establishmentName;
+		for (let i = 0; i < establishments.length; i++) {
+			const element = establishments[i].establishmentName;
 			hotels.push(element)
 		}
 		setHotelNames(hotels)
