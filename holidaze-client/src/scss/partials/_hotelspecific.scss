@@ -12,7 +12,6 @@
     &__image{
         width: 100%;
         margin-top: -50px;
-        margin-bottom: 0;
         margin-bottom: -50px;
     }
     &__title{
@@ -105,3 +104,69 @@
     }
 }
 
+@media only screen and (max-width: 800px) {
+    .hotelspecificContainer{
+        padding-bottom: 20px;
+        margin-top: -30px;
+    }
+    .imageContainer{
+        overflow: hidden;
+        height: 400px;
+        &__image{
+            height: 120%;
+            width: 120%;
+            margin-top: -10%;
+            margin-left: -10%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &__title{
+            padding-left: 10%;
+            margin: 24px;
+            margin-left: 0;
+            top: 140px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        &__line{
+            height: 45px;
+            position: absolute;
+            top: 160px;
+            width: 100%;
+        }
+    }
+    .infoContainer{
+        @include contentContainer;
+        margin: 5%;
+        margin-top: 0;
+        border-top: 0;
+        padding: 5%;
+        font-size: 0.9em;
+        width: 90%;
+        min-height: 620px;
+    }
+    
+    .infoLeft{
+        
+        width: 100%;
+        margin-right: 0;
+        float: none;
+        padding: 0;
+        &__button{
+            width: 100%;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-left: 0;
+            float: left;
+            position: relative;
+        }
+    }
+    .infoRight{
+        width: 100%;
+        padding: 0;
+        padding-top: 20px;
+        float: none;
+        overflow: hidden;
+    }
+    
+}

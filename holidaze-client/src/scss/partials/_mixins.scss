@@ -77,11 +77,9 @@
 }
 
 @mixin shuffle {
-    position: relative;
     background-color: $light-lime;
     height: 12px;
     border-radius: 6px;
-    margin-top: -7px;
     border: 2px solid $dark-blue;
 }
 

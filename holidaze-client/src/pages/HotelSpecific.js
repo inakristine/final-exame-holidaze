@@ -26,7 +26,9 @@ export default function SpecificHotel(props) {
 
     return (
         (obj !== undefined) ?
-            <div className='hotelspecificContainer'>
+        <div>
+        <div className='pushbox'></div>
+        <div className='hotelspecificContainer'>
                 <HotelSpecific
                     name={hotel.establishmentName}
                     image={hotel.imageUrl}
@@ -38,7 +40,7 @@ export default function SpecificHotel(props) {
                     guests={hotel.maxGuests}
                     catering={hotel.selfCatering}
 
-                    map={<ReactMapGL {...viewport} mapboxApiAccessToken='pk.eyJ1IjoiaW5ha3Jpc3RpbmUiLCJhIjoiY2thbncwc3BiMXYyZTMxbG0zenQ2MWlnYSJ9.z1Kiyt5elDHNod9Ka2_neQ'
+                    map={<ReactMapGL className='map' {...viewport} mapboxApiAccessToken='pk.eyJ1IjoiaW5ha3Jpc3RpbmUiLCJhIjoiY2thbncwc3BiMXYyZTMxbG0zenQ2MWlnYSJ9.z1Kiyt5elDHNod9Ka2_neQ'
                         mapStyle='mapbox://styles/inakristine/ckanxddus67761ilku2tw8egn'
                         onViewportChange={viewport => {
                             setViewport(viewport);
@@ -55,9 +57,12 @@ export default function SpecificHotel(props) {
                     </ReactMapGL>}
                 />
             </div>
+            </div>
             :
+            <div><div className='pushbox'></div>
             <div className='hotelspecificContainer'>
                 <h1>no data</h1>
+            </div>
             </div>
     )
 }

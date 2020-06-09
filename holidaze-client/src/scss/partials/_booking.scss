@@ -81,6 +81,7 @@
 }
 
 @media only screen and (max-width: 800px) {
+   
     .bookingForm{
         @include contentContainer;
         margin: 5%;

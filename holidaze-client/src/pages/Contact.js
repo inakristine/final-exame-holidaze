@@ -8,6 +8,8 @@ export default function Contact() {
 	console.log('Errors present:', errors);
 
 	return (
+		<div>
+        <div className='pushbox'></div>
 		<div className='contactForm'>
 			<h1>Send us a message:</h1>
 
@@ -63,6 +65,7 @@ export default function Contact() {
 					<input className='[ inputContainer__submit ]' type='submit' />
 				</div>
 			</form>
+		</div>
 		</div>
 	);
 }

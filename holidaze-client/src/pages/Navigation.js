@@ -10,8 +10,8 @@ export default function Navigation(props) {
 
 
   let [sliderpos, setSliderpos] = useState(home)
-  let [menuicon, setMenuicon] = useState()
-  let [navbar, setNavbar] = useState()
+  let [menuicon, setMenuicon] = useState('navicon')
+  let [navbar, setNavbar] = useState('navbar__hide')
 
   let sliderHome = () => {
     setSliderpos(home);
@@ -30,31 +30,34 @@ export default function Navigation(props) {
   }
 
   let showHideMenu = () => {
-    setMenuicon('navicon__hide');
-    setNavbar('navbar');
+    menuicon === 'navicon'? setMenuicon('navicon__hide') : setMenuicon('navicon');
+    navbar === ('navbar') ? setNavbar('navbar__hide') : setNavbar('navbar');
   }
 
-  let hidemenu = () => {
-    setMenuicon('navicon');
-    setNavbar('navbar__hide');
-  }
   
 
+
+
   return (
-    <nav>
+
+    <nav className='navigation'>
+
+
     <div className={menuicon} onClick={showHideMenu}>
-    <div className='navicon__bar'></div>
-    <div className='navicon__bar'></div>
-    <div className='navicon__bar'></div>
+    <div className='navicon__bar' onClick={showHideMenu}></div>
+    <div className='navicon__bar' onClick={showHideMenu}></div>
+    <div className='navicon__bar' onClick={showHideMenu}></div>
     </div>
-    <div className={navbar} onClick={hidemenu}>
-      <div className='navbar__link--mobile'><Link className='navbar__link' to='/'  onClick={ sliderHome } >Home</Link></div>
-      <div className='navbar__link--mobile'><Link className='navbar__link' to='/Booking/' onClick={ sliderBooking } >Booking</Link></div>
-      <div className='navbar__link--mobile'><Link className='navbar__link' to='/Contact/' onClick={ sliderContact }>Contact</Link></div>
-      <div className='navbar__link--mobile'><Link className='navbar__link-right' to='/AdminLogin/'  onClick={ sliderAdmin } >Admin login</Link></div>
-      <div className='navbar__line'></div>
-      <div className={ sliderpos }></div>
+    <div className={navbar} onClick={showHideMenu}>
+      <Link to='/'  onClick={ sliderHome } ><div  className='navbar__link'>Home</div></Link>
+      <Link to='/Booking/' onClick={ sliderBooking } ><div  className='navbar__link'>Booking</div></Link>
+      <Link to='/Contact/' onClick={ sliderContact }><div  className='navbar__link'>Contact</div></Link>
+      <Link to='/AdminLogin/'  onClick={ sliderAdmin } ><div  className='navbar__link--right'>Admin login</div></Link>
     </div>
+    <div className='navbar__line'></div>
+    <div className={ sliderpos }></div>
+
+
   </nav>
     
 

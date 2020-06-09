@@ -36,6 +36,8 @@ export default function Booking(props) {
     console.log(errors);
 
     return (
+        <div>
+        <div className='pushbox'></div>
         <div className='bookingForm'>
             <h1>Send an enquiry:</h1>
 
@@ -143,6 +145,7 @@ export default function Booking(props) {
                     type='submit' disabled={(buttonConditions !== true)}
                 />
             </form>
+        </div>
         </div>
     );
 }

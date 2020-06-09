@@ -1,19 +1,17 @@
+
+.navigation{
+    height: 320;
+    padding-top: 200px;
+    position: relative;
+    padding-bottom: 10px;
+}
 .navbar{
-    &__hide{
-        display: block;
-    }
-    .navicon{
-        display: none;
-        &__hide{
-            display: none;
-        }
-    }
-    padding-top: 180px;
     &__link{
         @include largeLink;
         margin-left: 40px;
         float: left;
-        &-right{
+        display: block;
+        &--right{
             @include largeLink;
             float: right;
             margin-right: 40px;
@@ -23,7 +21,7 @@
         height: 2px;
         width: 100%;
         background-color: $dark-blue;
-        margin-top: 45px;
+        margin-top: 50px;
     }
     &__slider{
         &--1pos{
@@ -31,49 +29,114 @@
             margin-left: 20px;
             width: 120px;
             transition-property: all;
-	transition-duration: 1s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            margin-top: -7px;
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         }
         &--2pos{
             @include shuffle;
             margin-left: 140px;
             width: 140px;
+            margin-top: -7px;
             transition-property: all;
-	transition-duration: 1s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         }
         &--3pos{
             @include shuffle;
             margin-left: 290px;
             width: 140px;
+            margin-top: -7px;
             transition-property: all;
-	transition-duration: 1s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         }
         &--4pos{
             @include shuffle;
             margin-left: 790px;
             width: 180px;
+            margin-top: -7px;
             transition-property: all;
-	transition-duration: 1s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         }
+    }
+    &__hide{
+        display: block;
+    }
+}
+.navicon{
+    display: none;
+    &__hide{
+        display: none;
     }
 }
 
+
 @media only screen and (max-width: 800px) {
+    .navigation{
+        padding: 5%;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        z-index: 3000;
+    }
+
+    .navbar{
+        width: 100%;
+        &__link{
+            width: 100%;
+            @include largeLink;
+            margin-left: 0;
+            float: none;
+            background-color: white;
+            margin-bottom: 5px;
+            height: 45px;
+            @include main-shaddow;
+            &--right{
+                width: 100%;
+                @include largeLink;
+                float: none;
+                margin-right: 0;
+                background-color: white;
+                height: 45px;
+                @include main-shaddow;
+            }
+        }
+        &__line{
+            display: none;
+        }
+        &__slider{
+            &--1pos{
+                display: none;
+            }
+            &--2pos{
+                display: none;
+            }
+            &--3pos{
+                display: none;
+            }
+            &--4pos{
+                display: none;
+            }
+        }
+        &__hide{
+            display: none;
+        }
+    }
     .navicon{
         display: block;
-        height: 45px;
-        width: 45px;
+        height: 55px;
+        width: 55px;
         border-radius: 50%;
-        margin-left: 82%;
-        margin-top: 20px;
+        right: 2%;
+        top: 32px;
         background-color: white;
         border: 2px solid $dark-blue;
-        padding-top: 8px;
-        padding-left: 5px;
-
+        padding-top: 13px;
+        padding-left: 10px;
+        z-index: 1000;
+        position: absolute;
         &__bar{
             background-color: $dark-blue;
             height: 5px;
@@ -82,28 +145,139 @@
         }
         &__hide{
             display: none;
+            
+        }
+    }
+}
+
+
+
+/*
+.navbar{
+    display: block;
+    position: relative;
+    &__link{
+        @include largeLink;
+        float: left;
+        margin-left: 40px;
+        &-right{
+            @include largeLink;
+            float: right;
+            margin-right: 40px;
+        }   
+    }
+    &__line{
+        height: 2px;
+        width: 1000px;
+        background-color: $dark-blue;
+        position: relative;
+        margin-top: 50px;
+    }
+    &__slider{
+        &--1pos{
+            @include shuffle;
+            margin-left: 20px;
+            width: 120px;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            display: block;
+            position: relative;
+            margin-top: 45px;
+        }
+        &--2pos{
+            @include shuffle;
+            margin-left: 140px;
+            width: 140px;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            display: block;
+            position: relative;
+            margin-top: 45px;
+        }
+        &--3pos{
+            @include shuffle;
+            margin-left: 290px;
+            width: 140px;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            display: block;
+            position: relative;
+            margin-top: 45px;
+        }
+        &--4pos{
+            @include shuffle;
+            margin-left: 790px;
+            width: 180px;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            display: block;
+            position: relative;
+            margin-top: 45px;
+        }
+    }
+}
+.navicon{
+        display: none;
+        &__hide{
+            display: none;
+        }
+    }
+
+@media only screen and (max-width: 800px) {
+    .navigation{
+        padding: 10px;
+        position: absolute;
+        width: 100%;
+        z-index: 3000;
+    }
+    .navicon{
+        display: block;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        left: 5%;
+        background-color: white;
+        border: 2px solid $dark-blue;
+        padding-top: 8px;
+        padding-left: 5px;
+        z-index: 1000;
+        position: absolute;
+        &__bar{
+            background-color: $dark-blue;
+            height: 5px;
+            width: 30px;
+            margin-bottom: 5px;
+        }
+        &__hide{
+            display: none;
+            
         }
     }
     .navbar{
         display: block;
-        padding-top: 100px;
-        &__link{ 
-        margin-left: 0;
-        &-right{
-            float: none;
-            margin-right: 0;
-        }
+        position: absolute;
+        width: 100%;
         &__hide{
             display: none;
         }
-            &--mobile{
-                width: 90%;
-                height: 45px;
-                margin: 3px;
-                margin-left: 5%;
-                padding: 0 15px;
-                border-color: 2px solid $dark-blue;
+        &__link{ 
+            position: relative;
+            float: none;
+            margin-left: 0;
+            background-color: white;
+            padding: 4px;
+            width: 100%;
+            margin-bottom: 5px;
+            width: 100%;
+            &-right{
+                float: none;
+                margin-right: 0;
                 background-color: white;
+                width: 100%;
             }
         }
         &__line{
@@ -126,4 +300,4 @@
     }
     
 
-}
+}*/
