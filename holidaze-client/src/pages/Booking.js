@@ -5,11 +5,6 @@ import { ADD_BOOKING } from '../Constants/Constants';
 
 export default function Booking(props) {
 
-    const setTop = () => {
-        window.scrollTo({ top: 100, left: 100 });
-    }
-    window.onload = setTop();
-
     let bookingTitle = props.match.params.id;
 
     let [arrival, setArrival] = useState('');

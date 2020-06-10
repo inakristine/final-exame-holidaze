@@ -5,11 +5,6 @@ import { ADD_MESSAGE } from '../Constants/Constants';
 
 export default function Contact() {
 
-	const setTop = () => {
-		window.scrollTo({ top: 100, left: 100 });
-	}
-	window.onload = setTop();
-
 	const { register, handleSubmit, errors } = useForm();
 	console.log('Errors present:', errors);
 

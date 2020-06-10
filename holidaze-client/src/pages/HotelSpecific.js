@@ -4,15 +4,7 @@ import establishments from '../json/establishments.json';
 import HotelSpecific from '../components/hotelspesific';
 
 
-
-
 export default function SpecificHotel(props) {
-
-    const setTop = () => {
-        window.scrollTo({ top: 100, left: 100 });
-    }
-    window.onload = setTop();
-
 
     let id = props.match.params.id;
     let obj = establishments.find(obj => obj.establishmentName === id);
@@ -26,7 +18,6 @@ export default function SpecificHotel(props) {
         height: '300px',
         width: '389px',
         zoom: 12,
-
     })
 
     return (
