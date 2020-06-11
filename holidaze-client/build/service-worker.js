@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/holidaze/precache-manifest.45a920b8df4bfcbe08576fbe163235d2.js"
+  "/holidaze/precache-manifest.d07a10883aa50bd26e14372c77bf7ef1.js"
 );
 
 self.addEventListener('message', (event) => {

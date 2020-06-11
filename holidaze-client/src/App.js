@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/header';
 import Nav from './pages/Navigation';
 import Footer from './components/footer';
+import Home from './pages/Home';
 import './scss/styles.scss';
 
 const init = () => {

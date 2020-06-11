@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/holidaze/static/css/main.0a86c3f9.chunk.css",
-    "main.js": "/holidaze/static/js/main.9922f3ae.chunk.js",
-    "main.js.map": "/holidaze/static/js/main.9922f3ae.chunk.js.map",
+    "main.js": "/holidaze/static/js/main.c05f911a.chunk.js",
+    "main.js.map": "/holidaze/static/js/main.c05f911a.chunk.js.map",
     "runtime-main.js": "/holidaze/static/js/runtime-main.7b4a6013.js",
     "runtime-main.js.map": "/holidaze/static/js/runtime-main.7b4a6013.js.map",
     "static/js/2.8bda51c3.chunk.js": "/holidaze/static/js/2.8bda51c3.chunk.js",
     "static/js/2.8bda51c3.chunk.js.map": "/holidaze/static/js/2.8bda51c3.chunk.js.map",
     "index.html": "/holidaze/index.html",
-    "precache-manifest.45a920b8df4bfcbe08576fbe163235d2.js": "/holidaze/precache-manifest.45a920b8df4bfcbe08576fbe163235d2.js",
+    "precache-manifest.d07a10883aa50bd26e14372c77bf7ef1.js": "/holidaze/precache-manifest.d07a10883aa50bd26e14372c77bf7ef1.js",
     "service-worker.js": "/holidaze/service-worker.js",
     "static/css/main.0a86c3f9.chunk.css.map": "/holidaze/static/css/main.0a86c3f9.chunk.css.map",
     "static/js/2.8bda51c3.chunk.js.LICENSE.txt": "/holidaze/static/js/2.8bda51c3.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.7b4a6013.js",
     "static/js/2.8bda51c3.chunk.js",
     "static/css/main.0a86c3f9.chunk.css",
-    "static/js/main.9922f3ae.chunk.js"
+    "static/js/main.c05f911a.chunk.js"
   ]
 }

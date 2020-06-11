@@ -15,13 +15,13 @@ ReactDOM.render(
 	<Router>
 		<App>
 			<Switch>
-				<Route path='/'exact component={Home} />
-		<Route path='/Contact' component={Contact} />
-        <Route path='/AdminLogin' component={AdminLogin} />
-		<Route path='/Booking' component={Booking} />
+				<Route path='/' exact component={Home} />
+				<Route path='/Contact' component={Contact} />
+				<Route path='/AdminLogin' component={AdminLogin} />
+				<Route path='/Booking' component={Booking} />
 
-		<Route path='/BookingID/:id' component={BookingID} />
-		<Route path='/HotelSpecific/:id' component={HotelSpecific} />
+				<Route path='/BookingID/:id' component={BookingID} />
+				<Route path='/HotelSpecific/:id' component={HotelSpecific} />
 			</Switch>
 		</App>
 	</Router>,

@@ -32,7 +32,7 @@ export default function Home() {
                         );
                     })
                 ) : (
-                        <div>Waiting for hotels to apair</div>
+                        <div className='cardcontainer'><h1>Waiting for data. Please refresh page manually.</h1></div>
                     )}
             </div>
         </div>

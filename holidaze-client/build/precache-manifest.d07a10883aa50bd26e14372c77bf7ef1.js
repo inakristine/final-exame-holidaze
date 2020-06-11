@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e130bbd411ae8e927f1939e9d509049",
+    "revision": "59fcd570747a49b0c95cc104ea9866ad",
     "url": "/holidaze/index.html"
   },
   {
-    "revision": "af6541593b15d49a9d4c",
+    "revision": "f976b47a7ac6993931c4",
     "url": "/holidaze/static/css/main.0a86c3f9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/holidaze/static/js/2.8bda51c3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "af6541593b15d49a9d4c",
-    "url": "/holidaze/static/js/main.9922f3ae.chunk.js"
+    "revision": "f976b47a7ac6993931c4",
+    "url": "/holidaze/static/js/main.c05f911a.chunk.js"
   },
   {
     "revision": "b55bb97ebeaf1775e363",
